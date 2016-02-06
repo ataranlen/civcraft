@@ -29,8 +29,8 @@ buffs:
 
     - id: 'buff_monopoly'
       name: 'Monopoly'
-      description: 'Increases coin output from all trade goods in use by <lightgreen>3%<r> <gold>Stackable<r>'
-      value: '0.03'
+      description: 'Increases coin output from all trade goods in use by <lightgreen>15%<r> <gold>Stackable<r>'
+      value: '0.15'
       stackable: true
       parent:
     
@@ -78,8 +78,8 @@ buffs:
 
     - id: 'buff_fire_bomb'
       name: 'Fire Bomb'
-      description: 'Increases damage of arrow/cannon towers by a <lightgreen>10%<r> Also makes arrow towers shoot flaming arrows <gold>Stackable<r>'
-      value: '0.1'
+      description: 'Increases damage of arrow/cannon towers by a <lightgreen>50%<r> Also makes arrow towers shoot flaming arrows <gold>Stackable<r>'
+      value: '0.5'
       stackable: false
       parent:
 
