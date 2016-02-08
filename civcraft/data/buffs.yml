@@ -36,7 +36,7 @@ buffs:
     
     - id: 'buff_preservative'
       name: 'Preservative'
-      description: 'Reduces consumption of cottages by <lightgreen>50%<r>'
+      description: 'Reduces consumption of cottages by <lightgreen>50%<r> <red>Not-Stackable<r>''
       value: '0.5'
       stackable: false
       parent:
@@ -50,7 +50,7 @@ buffs:
 
     - id: 'buff_barricade'
       name: 'Barricade'
-      description: 'Increases HP of defensive structures by <lightgreen>50%<r>'
+      description: 'Increases HP of defensive structures by <lightgreen>50%<r> <red>Not-Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
@@ -64,84 +64,84 @@ buffs:
 
     - id: 'buff_fine_art'
       name: 'Fine Art'
-      description: 'Increases culture output of a town by <lightgreen>25%<r>'
+      description: 'Increases culture output of a town by <lightgreen>25%<r> <red>Not-Stackable<r>'
       value: '0.25'
       stackable: false
       parent:
 
     - id: 'buff_extraction'
       name: 'Extraction'
-      description: 'Increases the Trommel chance of producing precious minerals by <lightgreen>50%<r> <gold>Stackable<r>'
+      description: 'Increases the Trommel chance of producing precious minerals by <lightgreen>50%<r> <red>Not-Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
 
     - id: 'buff_fire_bomb'
       name: 'Fire Bomb'
-      description: 'Increases damage of arrow/cannon towers by a <lightgreen>10%<r> Also makes arrow towers shoot flaming arrows <gold>Stackable<r>'
+      description: 'Increases damage of arrow/cannon towers by a <lightgreen>10%<r> Also makes arrow towers shoot flaming arrows <red>Not-Stackable<r>'
       value: '1.0'
       stackable: false
       parent:
 
     - id: 'buff_fishing'
       name: 'Fishing'
-      description: 'Allows uncooked fish to replace the need for bread. <lightgreen>1 fish = 2 bread<r>'
+      description: 'Allows uncooked fish to replace the need for bread. <lightgreen>1 fish = 2 bread<r> <red>Not-Stackable<r>'
       value: '2'
       stackable: false
       parent:
     
     - id: 'buff_greed'
       name: 'Greed'
-      description: 'Increases interest rates by <lightgreen>3%<r>'
+      description: 'Increases interest rates by <lightgreen>3%<r> <red>Not-Stackable<r>'
       value: '0.03'
       stackable: false
       parent:
 
     - id: 'buff_medicine'
       name: 'Medicine'
-      description: 'Decreases friendly respawn time during war by <lightgreen>50<r> seconds.'
+      description: 'Decreases friendly respawn time during war by <lightgreen>50<r> seconds, <red>Not-Stackable<r>.'
       value: '50'
       stackable: false
       parent:
     
     - id: 'buff_dirty_money'
       name: 'Dirty Money'
-      description: 'Increases the chances of Steal Treasury by <lightgreen>50%<r>'
+      description: 'Increases the chances of Steal Treasury by <lightgreen>50%<r>, <red>Not-Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
 
     - id: 'buff_espionage'
       name: 'Espionage'
-      description: 'Increases the chances of poison granary and incite revolt by <lightgreen>50%<r>'
+      description: 'Increases the chances of poison granary and incite revolt by <lightgreen>50%<r>, <red>Not-Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
     
     - id: 'buff_rush'
       name: 'Rush'
-      description: 'Reduces the hammer cost of all structures, wonders and improvements by <lightgreen>15%<r>'
+      description: 'Reduces the hammer cost of all structures, wonders and improvements by <lightgreen>15%<r>, <red>Not-Stackable<r>'
       value: '0.15'
       stackable: false
       parent:
     
     - id: 'buff_sabotage'
       name: 'Sabotage'
-      description: 'Greatly increases the effectivenes of sabotage missions by <lightgreen>50%<r>'
+      description: 'Greatly increases the effectivenes of sabotage missions by <lightgreen>50%<r>, <red>Not-Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
 
     - id: 'buff_hedonism'
       name: 'Hedonism'
-      description: 'Grants an extra <lightgreen>3<r> happiness'
+      description: 'Grants an extra <lightgreen>3<r> happiness, <gold>Stackable<r>'
       value: '3.0'
       stackable: true
       parent:
 
     - id: 'buff_noanarchy'
       name: 'No Anarchy'
-      description: 'Civilization does not experience anarchy when switching governments.'
+      description: 'Civilization does not experience anarchy when switching governments, <red>Not-Stackable<r>'
       value: '0'
       stackable: false
       parent:
