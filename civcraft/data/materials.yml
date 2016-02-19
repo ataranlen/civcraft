@@ -2102,30 +2102,30 @@ materials:
               - " c "
               - " s "
 
-        - id: 'mat_stone_axe'
-          item_id: 275
-          item_data: 0
-          name: 'Stone Slicer'
-          craftable: true
-          shaped: true
-          category: '<lightgreen>Gear Tier 1'
-          components:
-              - name: 'Attack'
-                value: '6'
-              - name: 'NoVanillaDurability'
-              - name: 'DurabilityOnDeath'
-                value: '0.1'
-          ingredients:
-              - type_id: 4
-                data: 0
-                letter: 'c'
-              - type_id: 280
-                data: 0
-                letter: 's'
-          shape:
-              - "ccc"
-              - "csc"
-              - " s "
+#        - id: 'mat_stone_axe'
+#          item_id: 275
+#          item_data: 0
+#          name: 'Stone Slicer'
+#          craftable: true
+#          shaped: true
+#          category: '<lightgreen>Gear Tier 1'
+#          components:
+#              - name: 'Attack'
+#                value: '6'
+#              - name: 'NoVanillaDurability'
+#              - name: 'DurabilityOnDeath'
+#                value: '0.1'
+#          ingredients:
+#              - type_id: 4
+#                data: 0
+#                letter: 'c'
+#              - type_id: 280
+#                data: 0
+#                letter: 's'
+#          shape:
+#              - "ccc"
+#              - "csc"
+#              - " s "
 
 # Iron Gear recipes -------------------------------------------------
 
@@ -2157,32 +2157,32 @@ materials:
               - " s "
 
               # Checked 10/8/13
-        - id: 'mat_iron_axe'
-          item_id: 258
-          item_data: 0
-          name: 'Iron Cleaver'
-          craftable: true
-          required_techs: 'tech_metal_casting'
-          shaped: true
-          category: '<lightgreen>Gear Tier 1'
-          components:
-              - name: 'Attack'
-                value: '14'
-              - name: 'NoVanillaDurability'
-              - name: 'DurabilityOnDeath'
-                value: '0.1'
-          ingredients:
-              - type_id: 265
-                data: 0
-                letter: 'i'
-              - type_id: 280
-                data: 0
-                letter: 's'
-          shape:
-              - "iii"
-              - "isi"
-              - " s "
-
+#        - id: 'mat_iron_axe'
+#          item_id: 258
+#          item_data: 0
+#          name: 'Iron Cleaver'
+#          craftable: true
+#          required_techs: 'tech_metal_casting'
+#          shaped: true
+#          category: '<lightgreen>Gear Tier 1'
+#          components:
+#              - name: 'Attack'
+#                value: '14'
+#              - name: 'NoVanillaDurability'
+#              - name: 'DurabilityOnDeath'
+#                value: '0.1'
+#          ingredients:
+#              - type_id: 265
+#                data: 0
+#                letter: 'i'
+#              - type_id: 280
+#                data: 0
+#                letter: 's'
+#          shape:
+#              - "iii"
+#              - "isi"
+#              - " s "
+#
         # Checked 10/8/13
         - id: 'mat_iron_helmet'
           item_id: 306
@@ -2195,9 +2195,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '0.5'
+              - name: 'LeatherColor'
+                color: '#FFFFFF'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 265
                 data: 0
@@ -2218,10 +2221,13 @@ materials:
           category: '<lightgreen>Gear Tier 1'
           components:
               - name: 'Defense'
-                value: '1.0'
+                value: 1.0'
+              - name: 'LeatherColor'
+                color: '#FFFFFF'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 265
                 data: 0
@@ -2243,9 +2249,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '0.5'
+              - name: 'LeatherColor'
+                color: '#FFFFFF'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 265
                 data: 0
@@ -2268,9 +2277,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '0.5'
+              - name: 'LeatherColor'
+                color: '#FFFFFF'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 265
                 data: 0
@@ -2295,9 +2307,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '2.5'
+              - name: 'LeatherColor'
+                color: '#808080'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2320,9 +2335,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '2'
+              - name: 'LeatherColor'
+                color: '#808080'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2344,10 +2362,13 @@ materials:
           category: '<lightblue>Gear Tier 2'
           components:
               - name: 'Defense'
-                value: '3.0'
+                value: '3'
+              - name: 'LeatherColor'
+                color: '#808080'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2369,10 +2390,13 @@ materials:
           category: '<lightblue>Gear Tier 2'
           components:
               - name: 'Defense'
-                value: '2.5' 
+                value: '2.5'
+              - name: 'LeatherColor'
+                color: '#808080'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2413,33 +2437,33 @@ materials:
               - " h "
 
         # Checked 10/8/13
-        - id: 'mat_steel_axe'
-          item_id: 258
-          item_data: 0
-          name: 'Steel Double Axe'
-          craftable: true
-          required_techs: 'tech_sword_smithing'
-          shaped: true
-          category: '<lightblue>Gear Tier 2'
-          components:
-              - name: 'Attack'
-                value: '22'
-              - name: 'NoVanillaDurability'
-              - name: 'DurabilityOnDeath'
-                value: '0.1'
-          ingredients:
-              - type_id: 0
-                data: 0
-                custom_id: 'mat_steel_sword_blade'
-                letter: 'b'
-              - type_id: 0
-                data: 0
-                custom_id: 'mat_steel_sword_hilt'
-                letter: 'h'
-          shape:
-              - "bbb"
-              - "bhb"
-              - " h "
+#        - id: 'mat_steel_axe'
+#          item_id: 258
+#          item_data: 0
+#          name: 'Steel Double Axe'
+#          craftable: true
+#          required_techs: 'tech_sword_smithing'
+#          shaped: true
+#          category: '<lightblue>Gear Tier 2'
+#          components:
+#              - name: 'Attack'
+#                value: '22'
+#              - name: 'NoVanillaDurability'
+#              - name: 'DurabilityOnDeath'
+#                value: '0.1'
+#          ingredients:
+#              - type_id: 0
+#                data: 0
+#                custom_id: 'mat_steel_sword_blade'
+#                letter: 'b'
+#              - type_id: 0
+#                data: 0
+#                custom_id: 'mat_steel_sword_hilt'
+#                letter: 'h'
+#         shape:
+#              - "bbb"
+#              - "bhb"
+#              - " h "
 
 ## Carbide steel - -- -                  -----------------------------------------
 
@@ -2473,33 +2497,34 @@ materials:
               - " h "
 
         # Checked 10/8/13
-        - id: 'mat_carbide_steel_axe'
-          item_id: 283
-          item_data: 0
-          name: 'Carbide Steel Axe'
-          craftable: true
-          required_techs: 'tech_folded_steel'
-          shaped: true
-          category: '<lightpurple>Gear Tier 3'
-          components:
-              - name: 'Attack'
-                value: '28'
-              - name: 'NoVanillaDurability'
-              - name: 'DurabilityOnDeath'
-                value: '0.1'
-          ingredients:
-              - type_id: 0
-                data: 0
-                custom_id: 'mat_carbide_steel_sword_blade'
-                letter: 'b'
-              - type_id: 0
-                data: 0
-                custom_id: 'mat_carbide_steel_sword_hilt'
-                letter: 'h'
-          shape:
-              - "bbb"
-              - "bhb"
-              - " h "
+#        - id: 'mat_carbide_steel_axe'
+#          item_id: 283
+#          item_data: 0
+#          name: 'Carbide Steel Axe'
+#          craftable: true
+#          required_techs: 'tech_folded_steel'
+#          shaped: true
+#          category: '<lightpurple>Gear Tier 3'
+#          components:
+#              - name: 'Attack'
+#                value: '28'
+#              - name: 'NoVanillaDurability'
+#
+#              - name: 'DurabilityOnDeath'
+#                value: '0.1'
+#          ingredients:
+#              - type_id: 0
+#                data: 0
+#                custom_id: 'mat_carbide_steel_sword_blade'
+#                letter: 'b'
+#              - type_id: 0
+#                data: 0
+#                custom_id: 'mat_carbide_steel_sword_hilt'
+#                letter: 'h'
+#          shape:
+#              - "bbb"
+#              - "bhb"
+#              - " h "
 
         # Checked 10/8/13
         - id: 'mat_carbide_steel_helmet'
@@ -2513,9 +2538,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '4'
+              - name: 'LeatherColor'
+                color: '#FFFF00'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2538,9 +2566,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '4.5'
+              - name: 'LeatherColor'
+                color: '#FFFF00'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2563,9 +2594,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '4'
+              - name: 'LeatherColor'
+                color: '#FFFF00'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2587,10 +2621,13 @@ materials:
           category: '<lightpurple>Gear Tier 3'
           components:
               - name: 'Defense'
-                value: '4'
+                value: '3'
+              - name: 'LeatherColor'
+                color: '#FFFF00'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2633,33 +2670,33 @@ materials:
               - " b "
               - " h "
           # Checked 10/8/13
-        - id: 'mat_tungsten_axe'
-          item_id: 279
-          item_data: 0
-          name: 'Tungsten Broadaxe'
-          craftable: true
-          required_techs: 'tech_tempering'
-          shaped: true
-          category: '<gold>Gear Tier 4'
-          components:
-              - name: 'Attack'
-                value: '36'
-              - name: 'NoVanillaDurability'
-              - name: 'DurabilityOnDeath'
-                value: '0.1'
-          ingredients:
-              - type_id: 0
-                data: 0
-                custom_id: 'mat_tungsten_sword_blade'
-                letter: 'b'
-              - type_id: 0
-                data: 0
-                custom_id: 'mat_tungsten_sword_hilt'
-                letter: 'h'
-          shape:
-              - "bbb"
-              - "bhb"
-              - " h "
+#        - id: 'mat_tungsten_axe'
+#          item_id: 279
+#          item_data: 0
+#          name: 'Tungsten Broadaxe'
+#          craftable: true
+#          required_techs: 'tech_tempering'
+#          shaped: true
+#          category: '<gold>Gear Tier 4'
+#          components:
+#              - name: 'Attack'
+#                value: '36'
+#              - name: 'NoVanillaDurability'
+#              - name: 'DurabilityOnDeath'
+#                value: '0.1'
+#          ingredients:
+#              - type_id: 0
+#                data: 0
+#                custom_id: 'mat_tungsten_sword_blade'
+#                letter: 'b'
+#              - type_id: 0
+#                data: 0
+#                custom_id: 'mat_tungsten_sword_hilt'
+#                letter: 'h'
+#          shape:
+#              - "bbb"
+#              - "bhb"
+#              - " h "
 
         # Checked 10/8/13
         - id: 'mat_tungsten_boots'
@@ -2672,10 +2709,13 @@ materials:
           category: '<gold>Gear Tier 4'
           components:
               - name: 'Defense'
-                value: '4.5'
+                value: '4'
+              - name: 'LeatherColor'
+                color: '#0000FF'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2697,10 +2737,13 @@ materials:
           category: '<gold>Gear Tier 4'
           components:
               - name: 'Defense'
-                value: '5'
+                value: '6'
+              - name: 'LeatherColor'
+                color: '#0000FF'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2722,10 +2765,13 @@ materials:
           category: '<gold>Gear Tier 4'
           components:
               - name: 'Defense'
-                value: '4.5'
+                value: '6'
+              - name: 'LeatherColor'
+                color: '#0000FF'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
@@ -2748,9 +2794,12 @@ materials:
           components:
               - name: 'Defense'
                 value: '4'
+              - name: 'LeatherColor'
+                color: '#0000FF'
               - name: 'NoVanillaDurability'
               - name: 'DurabilityOnDeath'
                 value: '0.1'
+              - name: 'NoCauldronWash'
           ingredients:
               - type_id: 0
                 data: 0
