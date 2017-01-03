@@ -820,10 +820,10 @@ structures:
           type: 'direct'
           attribute: 'BEAKERS'
           value: '100.0'
-        # - name: 'AttributeBiome'
-        #   biomes: 'OCEAN,TAGIA,DESERT'
-        #   attribute: 'BEAKERS'
-        #   value: '0.05'
+        - name: 'AttributeBiome'
+          biomes: 'OCEAN,TAGIA,DESERT'
+          attribute: 'BEAKERS'
+          value: '0.05'
 
   - id: s_university
     template: university
@@ -992,10 +992,10 @@ structures:
     points: 1000
     max_hitpoints: 100
     components:
-        # - name: 'AttributeBiomeRadiusPerLevel'
-        #   attribute: 'COINS'
-        #   biomes: 'DESERT:5,BEACH:5,RIVER:5,JUNGLE:5'
-        #   base_value: '15.0'
+        - name: 'AttributeBiomeRadiusPerLevel'
+          attribute: 'COINS'
+          biomes: 'DESERT:5,BEACH:5,RIVER:5,JUNGLE:5'
+          base_value: '15.0'
         - name: 'ConsumeLevelComponent'
 
   - id: s_temple
@@ -1093,10 +1093,10 @@ structures:
     max_hitpoints: 300
     allow_outside_town: false
     components:
-        # - name: 'AttributeBiomeRadiusPerLevel'
-        #   attribute: 'HAMMERS'
-        #   biomes: 'EXTREME_HILLS:3,SMALL_MOUNTAINS:3,ICE_MOUNTAINS:3,DESERT_HILLS:1,FOREST_HILLS:1,TAGIA_HILLS:1,JUNGLE_HILLS:1'
-        #   base_value: '7.0'
+        - name: 'AttributeBiomeRadiusPerLevel'
+          attribute: 'HAMMERS'
+          biomes: 'EXTREME_HILLS:3,SMALL_MOUNTAINS:3,ICE_MOUNTAINS:3,DESERT_HILLS:1,FOREST_HILLS:1,TAGIA_HILLS:1,JUNGLE_HILLS:1'
+          base_value: '7.0'
         - name: 'ConsumeLevelComponent'
 
   - id: ti_trade_outpost
