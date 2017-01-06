@@ -1,21 +1,3 @@
-/*************************************************************************
- * 
- * AVRGAMING LLC
- * __________________
- * 
- *  [2013] AVRGAMING LLC
- *  All Rights Reserved.
- * 
- * NOTICE:  All information contained herein is, and remains
- * the property of AVRGAMING LLC and its suppliers,
- * if any.  The intellectual and technical concepts contained
- * herein are proprietary to AVRGAMING LLC
- * and its suppliers and may be covered by U.S. and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from AVRGAMING LLC.
- */
 package com.avrgaming.civcraft.object;
 
 import java.sql.ResultSet;
@@ -262,18 +244,18 @@ public class TownChunk extends SQLObject {
 		}
 		
 		//Test that we are not too close to another civ
-		try {
-			int min_distance = CivSettings.getInteger(CivSettings.civConfig, "civ.min_distance");
+// 		try {
+// 			int min_distance = CivSettings.getInteger(CivSettings.civConfig, "civ.min_distance");
 			
-			for (TownChunk cc : CivGlobal.getTownChunks()) {
-				if (cc.getCiv() != town.getCiv()) {
-					double dist = coord.distance(cc.getChunkCoord());
-					if (dist <= min_distance) {
-						DecimalFormat df = new DecimalFormat();
-						throw new CivException(CivSettings.localize.localizedString("var_town_chunk_claimTooClose",cc.getCiv().getName(),df.format(dist),min_distance));
-					}
-				}
-			}	
+// 			for (TownChunk cc : CivGlobal.getTownChunks()) {
+// 				if (cc.getCiv() != town.getCiv()) {
+// 					double dist = coord.distance(cc.getChunkCoord());
+// 					if (dist <= min_distance) {
+// 						DecimalFormat df = new DecimalFormat();
+// 						throw new CivException(CivSettings.localize.localizedString("var_town_chunk_claimTooClose",cc.getCiv().getName(),df.format(dist),min_distance));
+// 					}
+// 				}
+// 			}	
 		} catch (InvalidConfiguration e1) {
 			e1.printStackTrace();
 			throw new CivException(CivSettings.localize.localizedString("internalException"));
