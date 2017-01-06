@@ -130,6 +130,9 @@ civ:
     # Amount of hours civs have to wait until a town is gifted or merged.
     gift_cooldown_hours: 48
 
+    # Configuration for preview while building.
+    preview: BLOCK_IRON 
+
 ore_rates:
     iron: 20.0
     gold: 200.0
