@@ -34,11 +34,11 @@ public class WarAntiCheat {
 				continue;
 			}
 			
-			Resident resident = CivGlobal.getResident(player);
-			onWarTimePlayerCheck(resident);
+// 			Resident resident = CivGlobal.getResident(player);
+// 			onWarTimePlayerCheck(resident);
 		}
 		
-		CivMessage.global(CivColor.LightGray+CivSettings.localize.localizedString("war_kick_atWarNoAnticheat"));
+// 		CivMessage.global(CivColor.LightGray+CivSettings.localize.localizedString("war_kick_atWarNoAnticheat"));
 	}
 	
 	public static void onWarTimePlayerCheck(Resident resident) {
@@ -50,14 +50,14 @@ public class WarAntiCheat {
 			return;
 		}
 		
-		try {
-			if (!resident.isUsesAntiCheat()) {
-				TaskMaster.syncTask(new PlayerKickBan(resident.getName(), true, false, 
-						CivSettings.localize.localizedString("war_kick_needAnticheat1")+
-						CivSettings.localize.localizedString("war_kick_needAntiCheat2")));
-			}
-		} catch (CivException e) {
-		}
+// 		try {
+// 			if (!resident.isUsesAntiCheat()) {
+// 				TaskMaster.syncTask(new PlayerKickBan(resident.getName(), true, false, 
+// 						CivSettings.localize.localizedString("war_kick_needAnticheat1")+
+// 						CivSettings.localize.localizedString("war_kick_needAntiCheat2")));
+// 			}
+// 		} catch (CivException e) {
+// 		}
 	}
 	
 }
