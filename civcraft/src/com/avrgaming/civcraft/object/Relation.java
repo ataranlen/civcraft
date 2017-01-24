@@ -47,8 +47,9 @@ public class Relation extends SQLObject {
 		WAR,
 		PEACE,
 		ALLY,
-//		MASTER,
-//		VASSAL
+		MASTER,
+		VASSAL
+		//CELESTIAL
 	}
 
 	private Status relation = Status.NEUTRAL;
@@ -205,14 +206,14 @@ public class Relation extends SQLObject {
 		case ALLY:
 			color = CivColor.Green;
 			break;
-//		case MASTER:
-//			color = CivColor.Gold;
-//			out = "MASTER"+CivColor.White+" of "+this.other_civ.getName();
-//			break;
-//		case VASSAL:
-//			color = CivColor.LightPurple;
-//			out = "VASSAL"+CivColor.White+" to "+this.other_civ.getName();
-//			break;
+		case MASTER:
+			color = CivColor.Gold;
+			out = "MASTER"+CivColor.White+" of "+this.other_civ.getName();
+			break;
+		case VASSAL:
+			color = CivColor.LightPurple;
+			out = "VASSAL"+CivColor.White+" to "+this.other_civ.getName();
+			break;
 		}
 		
 		String expireString = "";
@@ -238,10 +239,10 @@ public class Relation extends SQLObject {
 			return CivColor.LightBlue;
 		case ALLY:
 			return CivColor.Green;
-//		case MASTER:
-//			return CivColor.Gold;
-//		case VASSAL:
-//			return CivColor.LightPurple;
+		case MASTER:
+			return CivColor.Gold;
+		case VASSAL:
+			return CivColor.LightPurple;
 		default:
 			return CivColor.White;
 		}
@@ -267,17 +268,6 @@ public class Relation extends SQLObject {
 		this.aggressor_civ = aggressor_civ;
 	}
 	
-	/*
-	 * This key is unique to the 'pair' of relations so that
-	 * Civ A --> WAR --> CivB
-	 * Uses the same key as 
-	 * Civ B --> WAR --> CivA
-	 * 
-	 * We'll ensure that by comparing they're ids and returning the string
-	 * id1:id2 
-	 * 
-	 * where id1 is always less than id2.
-	 */
 	public String getPairKey() {
 		String key = "";
 		
