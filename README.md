@@ -1,4 +1,4 @@
-MineTexas CivilizationCraft Minecraft Plugin Fork
+CivilizationCraft Minecraft Plugin Fork
 ========
 
 CivilizationCraft is a massive, server side Minecraft modification written for Bukkit. In CivilizationCraft, players band together to construct camps, towns, and civilizations which go on to research technology, engage in diplomacy, build wonders, and fight for world dominance. 
@@ -22,8 +22,10 @@ AvRGaming LLC
 MineTexas.com
 - Ataranlen (Nathan Stoltenberg) Plugin Programmer
 
-Additional Contributors
+Celestials Contributors
 ========================
-The community at http://civilizationcraft.net/
+Celestials
+- CrazyRightNow (EgorKostyuk) Plugin programmer
+- merzuka (Artem Merosokov) template manager
 
-A special thanks to HighlifeTTU and LazerTester from the ShotBow Network at http://shotbow.net.
+A special thanks to hellfirepvp for main class of moblib.
