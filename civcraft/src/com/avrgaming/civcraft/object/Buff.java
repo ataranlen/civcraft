@@ -23,13 +23,6 @@ public class Buff
     public static final String MEDICINE = "buff_medicine";
     public static final String RUSH = "buff_rush";
     public static final String DEBUFF_PYRAMID_LEECH = "debuff_pyramid_leech";
-    public static final String EXTRACTIONCANYON = "buff_grand_canyon_extraction";
-    public static final String CONSTRUCTIONCANYON = "buff_grand_canyon_construction";
-    public static final String MSUBEAKERSRATE = "buff_msu_beakers_rate";
-    public static final String MSUSHARING = "buff_msu_profit_sharing";
-    public static final String GROWTHRATESHIP = "buff_salingship_growth_rate";
-    public static final String HAPPINESSRATESHIP = "buff_salingship_happiness_rate";
-	public static final String UNHAPPINESSRATESHIP = "buff_salingship_unhappiness_rate";
     private ConfigBuff config;
     private String source;
     private String key;
