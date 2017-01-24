@@ -21,7 +21,7 @@ slightly_favored_modifier: 0.5
 
 # 
 # Amount of points you need to be above to be considered favored.
-favored_points: 1000
+favored_points: 0
 favored_modifier: 0.2
 
 # Number of seconds until a winner is declared.

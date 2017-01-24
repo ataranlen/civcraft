@@ -228,6 +228,91 @@ wonders:
     points: 500000
     max_hitpoints: 2000
     regen_rate: 2
+
+  - id: w_battledome
+    template: battledome
+    template_y_shift: -1
+    displayName: Battledome
+    require_tech: 'tech_battledome'
+    require_upgrade:
+    check_event:
+    effect_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 100000.0
+    upkeep: 5000.0
+    hammer_cost: 80000.0
+    points: 100000
+    max_hitpoints: 1000
+    regen_rate: 1
+    
+  - id: w_msu
+    #появится 
+    template: the_great_library
+    #появится
+    template_y_shift: 0
+    #Перевод нижней строчки: Московский Государственный Университет
+    displayName: Moscow State University
+    #Перевод верхней строчки: Московский Государственный Университет
+    require_tech: 'tech_msu'
+    require_upgrade:
+    check_event:
+    effect_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 1500000.0
+    upkeep: 0.0
+    hammer_cost: 672000.0
+    points: 330000
+    max_hitpoints: 5000
+    regen_rate: 6
+
+  - id: w_sallingship
+    # SallingShip (появится)
+    template: mother_tree
+    # SallingShip (появится)
+    template_y_shift: 0
+    #Перевод нижней строчки: Бурдж аль араб
+    displayName: Salling Ship
+    #Перевод верхней строчки: Бурдж аль араб
+    require_tech: 'tech_sallingship'
+    require_upgrade:
+    check_event:
+    effect_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 3000000.0
+    upkeep: 0.0
+    hammer_cost: 1500000.0
+    points: 220000
+    max_hitpoints: 5000
+    regen_rate: 6
+
+  - id: w_grandcanyon
+    # GrandCanyon (появится)
+    template: mother_tree
+    # GrandCanyon (появится)
+    template_y_shift: 0
+    #Перевод нижней строчки: Гранд Каньон
+    displayName: Grand Canyon
+    #Перевод верхней строчки: Гранд Каньон
+    require_tech: 'tech_grand_canyon'
+    require_upgrade:
+    check_event:
+    effect_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 3000000.0
+    upkeep: 0.0
+    hammer_cost: 1500000.0
+    points: 220000
+    max_hitpoints: 5000
+    regen_rate: 6    
+
 # Wonder Buffs
 #
 # To de-complicate the structure/wonder relationship the buffs for wonders
@@ -296,3 +381,20 @@ wonder_buffs:
          - buff_ingermanland_fishing_boat_immunity
          - buff_ingermanland_trade_ship_income
          - buff_ingermanland_water_range
+         
+   - id: w_msu
+     buffs:
+         - buff_msu_beakers_rate
+         - buff_msu_profit_sharing
+         
+   - id: w_sallingship
+     buffs:
+         - buff_salingship_growth_rate
+         - buff_salingship_happiness_rate
+         - buff_salingship_unhappiness_rate
+         
+   - id: w_grandcanyon
+     buffs:
+         - buff_rush
+         - buff_grand_canyon_extraction
+         - buff_grand_canyon_construction      

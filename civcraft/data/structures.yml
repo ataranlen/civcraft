@@ -132,11 +132,11 @@ grocer_levels:
       price: 20.0
  
     - level: 4
-      itemName: 'Pumpkin Pie'
-      itemId: 400
+      itemName: 'Golden Carrot'
+      itemId: 396
       itemData: 0
       amount: 1
-      price: 50.0
+      price: 30.0
 ################# Blacksmith Settings #################
 blacksmith:
     forge_cost: 2500.0
@@ -148,7 +148,7 @@ cottage_levels:
          - 297,1
          - 391,1
      count: 24
-     coins: 75.0
+     coins: 100.0
 
    - level: 2
      consumes:
@@ -156,7 +156,7 @@ cottage_levels:
          - 391,2
          - 392,1
      count: 48
-     coins: 150.0
+     coins: 200.0
 
    - level: 3
      consumes:
@@ -164,7 +164,7 @@ cottage_levels:
          - 391,3
          - 392,2
      count: 96
-     coins: 225.0
+     coins: 300.0
 
    - level: 4
      consumes:
@@ -172,7 +172,7 @@ cottage_levels:
          - 391,4
          - 392,3
      count: 120
-     coins: 300.0
+     coins: 400.0
    
    - level: 5
      consumes:
@@ -180,7 +180,7 @@ cottage_levels:
          - 391,5
          - 392,4
      count: 144
-     coins: 375.0
+     coins: 500.0
 
    - level: 6
      consumes:
@@ -189,7 +189,7 @@ cottage_levels:
          - 392,6
          - 319,1
      count: 288
-     coins: 450.0
+     coins: 600.0
 ################# Temple Settings #################
 temple:
     # rate which temple modifies total culture output
@@ -235,27 +235,53 @@ temple_levels:
 ################# Mine Settings #################
 mine_levels:
     - level: 1
-      hammers: 100.00
+      hammers: 150.00
       amount: 10
       count: 24
    
     - level: 2
-      hammers: 150.00
+      hammers: 200.00
       amount: 15
       count: 48
     
     - level: 3
-      hammers: 200.00
+      hammers: 275.00
       amount: 20
       count: 96
     
     - level: 4
-      hammers: 250.00
+      hammers: 350.00
       amount: 25
       count: 120
     
     - level: 5
-      hammers: 300.00
+      hammers: 400.00
+      amount: 30
+      count: 144
+################# Processing Plant v2.0 settings#######
+processingplantv2_0_levels:
+    - level: 1
+      hammers: 150.00
+      amount: 10
+      count: 24
+   
+    - level: 2
+      hammers: 200.00
+      amount: 15
+      count: 48
+    
+    - level: 3
+      hammers: 275.00
+      amount: 20
+      count: 96
+    
+    - level: 4
+      hammers: 350.00
+      amount: 25
+      count: 120
+    
+    - level: 5
+      hammers: 400.00
       amount: 30
       count: 144
 
@@ -342,12 +368,12 @@ farm:
     # Number of seconds it takes for a growth tick to fire, cannot be less than 1.
     grow_tick_rate: 60
 
-    #keep this set to false to use the whole chunk height for growth in a farm chunk (Classic Behavior)
-    uses_range: false
-    #This the range above the base y in which the farm will grow.
-    #Use this to add additional height in which to grow.
-    #The default of 4 limits growth to the original height of the structure
-    grow_range_y: 4
+    # #keep this set to false to use the whole chunk height for growth in a farm chunk (Classic Behavior)
+    # uses_range: false
+    # #This the range above the base y in which the farm will grow.
+    # #Use this to add additional height in which to grow.
+    # #The default of 4 limits growth to the original height of the structure
+    # grow_range_y: 4
 
 ##################### Windmill Settings #####################
 windmill:
@@ -368,6 +394,18 @@ pasture:
 
     # Maximum amount of mobs for each type, per pasture
     max_mobs: 30
+
+#################### Battledome Settings #######################
+battledome:
+    # Amount of each mob that gets spawned per spawn_rate in the battledome.
+    spawn_count: 4
+
+    # Rate at which they spawn (in seconds)
+    spawn_rate: 3600
+
+    # Maximum amount of mobs for each area, per battledome
+    max_mobs: 30
+
 ################### Barracks Settings #######################
 barracks:
     # Barracks repair cost uses the following formula.
@@ -407,19 +445,19 @@ barracks:
 # Horses are then configured in 'stable_horses'
 stable_items:
     - name: 'Horse'
-      cost: 25000.0
+      cost: 5000.0
       store_id: 0
       item_id: 0
       horse_id: 1
     
     - name: 'Trusty Steed'
-      cost: 100000.0
+      cost: 10000.0
       store_id: 0
       item_id: 0
       horse_id: 2
 
     - name: 'Thoroughbred'
-      cost: 500000.0
+      cost: 50000.0
       store_id: 0
       item_id: 0
       horse_id: 3
@@ -430,16 +468,40 @@ stable_items:
       item_id: 0
       horse_id: 4
 
+    - name: 'War Horse'
+      cost: 100000.0
+      store_id: 0
+      item_id: 0
+      horse_id: 5
+
     - name: 'Saddle'
-      cost: 3000.0
+      cost: 2000.0
       store_id: 2
       item_id: 329
       horse_id: 0
 
     - name: 'Name Tag'
-      cost: 40000.0
+      cost: 10000.0
       store_id: 2
       item_id: 421
+      horse_id: 0
+
+    - name: 'Iron Horse Armor'
+      cost: 20000.0
+      store_id: 2
+      item_id: 417
+      horse_id: 0
+
+    - name: 'Gold Horse Armor'
+      cost: 50000.0
+      store_id: 2
+      item_id: 418
+      horse_id: 0
+
+    - name: 'Diamond Horse Armor'
+      cost: 100000.0
+      store_id: 2
+      item_id: 419
       horse_id: 0
 
 stable_horses:
@@ -447,22 +509,25 @@ stable_horses:
     - id: 1
       speed: 0.0
       jump: 0.8
-      health: 10.0
+      health: 20.0
       variant: 'BROWN'
+      name: 'Horse'
 
       # Trusty Steed
     - id: 2
       speed: 0.05
       jump: 0.8
-      health: 15.0
+      health: 30.0
       variant: 'BLACK'
+      name: "Trusty Steed"
 
       # Thoroughbred
     - id: 3
       speed: 0.08
       jump: 0.8
-      health: 20.0
+      health: 45.0
       variant: 'WHITE'
+      name: "Thoroughbred"
 
      # mule
     - id: 4
@@ -471,6 +536,16 @@ stable_horses:
       health: 20.0
       mule: true
       variant: 'BLACK'
+      name: "Mule"
+
+      # War Horse
+    - id: 5
+      speed: 0.1
+      jump: 1.0
+      health: 53.0
+      variant: 'CHESTNUT'
+      name: "War Horse"
+
 ################# Road Settings ######################
 road:
     # Speed multiplier for players
@@ -516,7 +591,7 @@ structures:
     update_event:
     onBuild_event:
     limit: 2
-    cost: 10000.0
+    cost: 50000.0
     upkeep: 0.0
     hammer_cost: 600.0
     points: 1000
@@ -530,7 +605,7 @@ structures:
           value: '25.0'
   
   - id: s_capitol
-    template: capitol #XXX misspelt =( but its easier to leave it that way.
+    template: capitol
     template_y_shift: 0
     displayName: Capitol
     require_tech:
@@ -540,7 +615,7 @@ structures:
     update_event:
     onBuild_event:
     limit: 2
-    cost: 50000.0
+    cost: 250000.0
     upkeep: 0.0
     hammer_cost: 600.0
     points: 6000
@@ -568,46 +643,79 @@ structures:
     max_hitpoints: 500
     ignore_floating: false
     components:
-        - name: 'AttributeBiome'
-          biomes: 'OCEAN'
+        - name: 'AttributeStatic'
+          type: 'direct'
           attribute: 'GROWTH'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'DEEP_OCEAN'
-          attribute: 'GROWTH'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'RIVER'
-          attribute: 'GROWTH'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_OCEAN'
-          attribute: 'GROWTH'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_RIVER'
-          attribute: 'GROWTH'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'OCEAN'
+          value: '200.0'
+        - name: 'AttributeStatic'
+          type: 'direct'
           attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'DEEP_OCEAN'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'RIVER'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_OCEAN'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_RIVER'
-          attribute: 'HAMMERS'
-          value: '0.5'
+          value: '200'
+
+  - id: s_museum
+    template: museum
+    template_y_shift: -1
+    displayName: Museum
+    require_tech: 'tech_archaeology'
+    require_structure: 
+    effect_event:
+    limit: 1
+    cost: 75000.0
+    upkeep: 1000.0
+    hammer_cost: 3600.0
+    points: 8000
+    max_hitpoints: 1000
+    ignore_floating: false
+    components:
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'HAPPINESS'
+          value: '1.0'
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'CULTURE'
+          value: '300.0'
+
+  - id: s_stadium
+    template: stadium
+    template_y_shift: 0
+    displayName: Stadium
+    require_tech: 'tech_refrigeration'
+    require_structure: 
+    effect_event:
+    limit: 1
+    cost: 100000.0
+    upkeep: 2000.0
+    hammer_cost: 7000.0
+    points: 9000
+    max_hitpoints: 1000
+    ignore_floating: false
+    components:
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'UNHAPPINESS'
+          value: '-2.0'
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'HAPPINESS'
+          value: '2.0'
+
+  - id: ti_hospital
+    template: hospital
+    template_y_shift: 0
+    displayName: Hospital
+    require_tech: 'tech_biology'
+    require_structure: 
+    allow_outside_town: false
+    effect_event:
+    limit: 1
+    cost: 75000.0
+    upkeep: 1000.0
+    hammer_cost: 5000.0
+    points: 5000
+    max_hitpoints: 2000
+    ignore_floating: false
+    tile_improvement: true
 
   - id: s_bank
     template: bank
@@ -656,6 +764,7 @@ structures:
     onBuild_event:
     limit: 0
     allow_outside_town: true
+    tile_improvement: true
     cost: 10000.0
     upkeep: 5000.0
     hammer_cost: 5000.0
@@ -674,6 +783,7 @@ structures:
     onBuild_event:
     limit: 1
     allow_outside_town: true
+    tile_improvement: true
     cost: 10000.0
     upkeep: 5000.0
     hammer_cost: 5000.0
@@ -735,12 +845,92 @@ structures:
         - name: 'AttributeStatic'
           type: 'direct'
           attribute: 'BEAKERS'
-          value: '50.0'
-        - name: 'AttributeBiome'
-          biomes: 'OCEAN,TAGIA,DESERT'
+          value: '100.0'
+        # - name: 'AttributeBiome'
+        #   biomes: 'OCEAN,TAGIA,DESERT'
+        #   attribute: 'BEAKERS'
+        #   value: '0.05'
+
+  - id: s_university
+    template: university
+    template_y_shift: 0
+    displayName: University
+    require_upgrade:
+    require_tech: 'tech_education'
+    effect_event:
+    check_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 25000.0
+    upkeep: 1000.0
+    hammer_cost: 3000.0
+    points: 5000
+    max_hitpoints: 500
+    components:
+        - name: 'AttributeStatic'
+          type: 'direct'
           attribute: 'BEAKERS'
-          value: '0.05'
-    
+          value: '100.0'
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'BEAKERBOOST'
+          value: '0.01'
+
+  - id: s_school
+    template: school
+    template_y_shift: -1
+    displayName: Public School
+    require_upgrade:
+    require_structure: 's_university'
+    require_tech: 'tech_scientific_method'
+    effect_event:
+    check_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 50000.0
+    upkeep: 1500.0
+    hammer_cost: 5000.0
+    points: 8000
+    max_hitpoints: 500
+    components:
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'BEAKERS'
+          value: '100.0'
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'BEAKERBOOST'
+          value: '0.01'
+
+  - id: s_research_lab
+    template: research_lab
+    template_y_shift: 0
+    displayName: Research Lab
+    require_upgrade:
+    require_structure: 's_school'
+    require_tech: 'tech_plastics'
+    effect_event:
+    check_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 100000.0
+    upkeep: 2000.0
+    hammer_cost: 10000.0
+    points: 10000
+    max_hitpoints: 1000
+    components:
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'BEAKERS'
+          value: '300.0'
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'BEAKERBOOST'
+          value: '0.01'
+
   - id: s_grocer
     template: grocer
     template_y_shift: 0
@@ -777,8 +967,8 @@ structures:
     components:
         - name: 'AttributeStatic'
           type: 'direct'
-          attribute: 'HAPPINESS'
-          value: '-3.0'
+          attribute: 'UNHAPPINESS'
+          value: '3.0'
         - name: 'AttributeStatic'
           type: 'direct'
           attribute: 'GROWTH'
@@ -828,12 +1018,12 @@ structures:
     points: 1000
     max_hitpoints: 100
     components:
-        - name: 'AttributeBiomeRadiusPerLevel'
-          attribute: 'COINS'
-          biomes: 'DESERT:5,BEACH:5,RIVER:5,JUNGLE:5'
-          base_value: '15.0'
+        # - name: 'AttributeBiomeRadiusPerLevel'
+        #   attribute: 'COINS'
+        #   biomes: 'DESERT:5,BEACH:5,RIVER:5,JUNGLE:5'
+        #   base_value: '15.0'
         - name: 'ConsumeLevelComponent'
-  
+
   - id: s_temple
     template: temple
     template_y_shift: 0
@@ -860,7 +1050,7 @@ structures:
           attribute: 'HAPPINESS'
           value: '5.0'
         - name: 'ConsumeLevelComponent'
-  
+
   - id: s_monument
     template: monument
     template_y_shift: -2
@@ -905,38 +1095,10 @@ structures:
     max_hitpoints: 300
     ignore_floating: true
     components:
-        - name: 'AttributeBiome'
-          biomes: 'OCEAN'
+        - name: 'AttributeStatic'
+          type: 'direct'
           attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'DEEP_OCEAN'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'RIVER'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_OCEAN'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_RIVER'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'BEACH'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'STONE_BEACH'
-          attribute: 'HAMMERS'
-          value: '0.5'
-        - name: 'AttributeBiome'
-          biomes: 'COLD_BEACH'
-          attribute: 'HAMMERS'
-          value: '0.5'
+          value: '200'
   
   - id: ti_mine
     template: mine
@@ -955,12 +1117,38 @@ structures:
     hammer_cost: 900.0
     points: 6200
     max_hitpoints: 300
+    allow_outside_town: false
+    components:
+        # - name: 'AttributeBiomeRadiusPerLevel'
+        #   attribute: 'HAMMERS'
+        #   biomes: 'EXTREME_HILLS:3,SMALL_MOUNTAINS:3,ICE_MOUNTAINS:3,DESERT_HILLS:1,FOREST_HILLS:1,TAGIA_HILLS:1,JUNGLE_HILLS:1'
+        #   base_value: '7.0'
+        - name: 'ConsumeLevelComponent'
+        
+  - id: ti_processingplantv2_0
+    template: mine
+    template_y_shift: -6
+    displayName: Processing Plant
+    require_upgrade:
+    require_tech: 'tech_productivity'
+    effect_event: process_processingplantv2_0
+    check_event:
+    update_event:
+    onBuild_event:
+    limit: 0
+    cost: 25000.0
+    upkeep: 1500.0
+    tile_improvement: true
+    hammer_cost: 900.0
+    points: 6200
+    max_hitpoints: 300
+    allow_outside_town: false
     components:
         - name: 'AttributeBiomeRadiusPerLevel'
-          attribute: 'HAMMERS'
+          attribute: 'GROWTH'
           biomes: 'EXTREME_HILLS:3,SMALL_MOUNTAINS:3,ICE_MOUNTAINS:3,DESERT_HILLS:1,FOREST_HILLS:1,TAGIA_HILLS:1,JUNGLE_HILLS:1'
           base_value: '7.0'
-        - name: 'ConsumeLevelComponent'
+        - name: 'ConsumeLevelComponent'      
 
   - id: ti_trade_outpost
     template: trade_outpost
@@ -1001,38 +1189,10 @@ structures:
     max_hitpoints: 500
     ignore_floating: true
     components:
-        - name: 'AttributeBiome'
-          biomes: 'OCEAN'
+        - name: 'AttributeStatic'
+          type: 'direct'
           attribute: 'HAMMERS'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'DEEP_OCEAN'
-          attribute: 'HAMMERS'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'RIVER'
-          attribute: 'HAMMERS'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_OCEAN'
-          attribute: 'HAMMERS'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_RIVER'
-          attribute: 'HAMMERS'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'BEACH'
-          attribute: 'HAMMERS'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'STONE_BEACH'
-          attribute: 'HAMMERS'
-          value: '0.05'
-        - name: 'AttributeBiome'
-          biomes: 'COLD_BEACH'
-          attribute: 'HAMMERS'
-          value: '0.05'
+          value: '50'
 
   - id: ti_trade_ship
     template: trade_ship
@@ -1062,38 +1222,14 @@ structures:
           type: 'direct'
           attribute: 'CULTURE'
           value: '100.0'
-        - name: 'AttributeBiome'
-          biomes: 'OCEAN'
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'GROWTH'
+          value: '100.0'
+        - name: 'AttributeStatic'
+          type: 'direct'
           attribute: 'HAMMERS'
-          value: '0.2'
-        - name: 'AttributeBiome'
-          biomes: 'DEEP_OCEAN'
-          attribute: 'HAMMERS'
-          value: '0.2'
-        - name: 'AttributeBiome'
-          biomes: 'RIVER'
-          attribute: 'HAMMERS'
-          value: '0.2'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_OCEAN'
-          attribute: 'HAMMERS'
-          value: '0.2'
-        - name: 'AttributeBiome'
-          biomes: 'FROZEN_RIVER'
-          attribute: 'HAMMERS'
-          value: '0.2'
-        - name: 'AttributeBiome'
-          biomes: 'BEACH'
-          attribute: 'HAMMERS'
-          value: '0.2'
-        - name: 'AttributeBiome'
-          biomes: 'STONE_BEACH'
-          attribute: 'HAMMERS'
-          value: '0.2'
-        - name: 'AttributeBiome'
-          biomes: 'COLD_BEACH'
-          attribute: 'HAMMERS'
-          value: '0.2'
+          value: '100'
         - name: 'TradeLevelComponent'
   
   - id: ti_farm
@@ -1197,6 +1333,27 @@ structures:
     ignore_floating: true
     has_template: false
  
+  - id: s_arrowship
+    template: arrow_ship
+    template_y_shift: -5
+    displayName: Arrow Ship
+    require_upgrade:
+    require_tech: 'tech_artillery'
+    require_structure: 's_shipyard'
+    effect_event:
+    check_event:
+    update_event:
+    onBuild_event:
+    limit: 6
+    cost: 50000.0
+    upkeep: 1500.0
+    hammer_cost: 2500.0
+    max_hitpoints: 500
+    points: 4650
+    allow_outside_town: true
+    strategic: true
+    ignore_floating: true
+ 
   - id: s_arrowtower
     template: arrow_tower
     template_y_shift: 0
@@ -1216,6 +1373,27 @@ structures:
     allow_outside_town: true
     strategic: true
   
+  - id: s_cannonship
+    template: cannon_ship
+    template_y_shift: -5
+    displayName: Cannon Ship
+    require_upgrade:
+    require_tech: 'tech_advanced_artillery'
+    require_structure: 's_shipyard'
+    effect_event:
+    check_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 250000.0
+    upkeep: 3500.0
+    hammer_cost: 5000.0
+    max_hitpoints: 1000
+    points: 10000
+    allow_outside_town: true
+    strategic: true
+    ignore_floating: true
+  
   - id: s_cannontower
     template: cannon_tower
     template_y_shift: 0
@@ -1234,7 +1412,69 @@ structures:
     points: 10000
     allow_outside_town: true
     strategic: true
-  
+
+  - id: s_teslatower
+    template: tesla_tower
+    template_y_shift: 0
+    displayName: Tesla Tower
+    require_upgrade:
+    require_tech: 'tech_electricity'
+    effect_event:
+    check_event:
+    update_event:
+    onBuild_event:
+    limit: 1
+    cost: 350000.0
+    upkeep: 4500.0
+    hammer_cost: 7500.0
+    max_hitpoints: 1000
+    points: 20000
+    allow_outside_town: true
+    strategic: true
+
+  - id: s_broadcast_tower
+    template: broadcast_tower
+    template_y_shift: -1
+    displayName: Broadcast Tower
+    require_upgrade:
+    require_tech: 'tech_radio'
+    effect_event:
+    check_event: 
+    update_event: 
+    onBuild_event:
+    limit: 1
+    cost: 200000.0
+    upkeep: 2000.0
+    hammer_cost: 10000.0
+    points: 25000
+    max_hitpoints: 1500
+    components:
+        - name: 'AttributeStatic'
+          type: 'direct'
+          attribute: 'CULTURE'
+          value: '200.0'
+
+  - id: s_scoutship
+    template: scout_ship
+    template_y_shift: -5
+    displayName: Scout Ship
+    require_upgrade:
+    require_tech: 'tech_sailing'
+    require_structure: 's_shipyard'
+    effect_event:
+    check_event:
+    update_event:
+    onBuild_event:
+    limit: 4
+    cost: 15000.0
+    upkeep: 800.0
+    hammer_cost: 1500.0
+    max_hitpoints: 500
+    points: 3000
+    allow_outside_town: true
+    strategic: true
+    ignore_floating: true
+
   - id: s_scouttower
     template: scout_tower
     template_y_shift: 0
@@ -1273,7 +1513,7 @@ structures:
     allow_outside_town: false
     components:
         - name: 'AttributeWarUnhappiness'
-          value: '-3.0'
+          value: '-1.0'
   
   - id: ti_windmill
     template: windmill

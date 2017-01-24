@@ -5,25 +5,65 @@
 enchants:
    - id: 'ench_fire_aspect'
      name: 'Fire Aspect'
-     cost: 10000.0
+     cost: 50000.0
      description: 'Adds fire aspect to your weapon.'
      enchant_id: 'FIRE_ASPECT'
 
    - id: 'ench_fire_protection'
      name: 'Fire Protection'
-     cost: 20000.0
+     cost: 25000.0
      description: 'Adds fire protection to your armor.'
      enchant_id: 'PROTECTION_FIRE'  
  
    - id: 'ench_flame'
      name: 'Flame (Bow)'
-     cost: 10000.0
+     cost: 50000.0
      description: 'Adds flame enchantment to your bow.'
      enchant_id: 'ARROW_FIRE'
    
    - id: 'ench_punchout'
      name: 'Punchout'
-     cost: 50000.0
+     cost: 20000.0
      description: '% chance to do extra damage to a structure.'
      enchant_id: 'LoreEnhancementPunchout'
+     
+   - id: 'ench_durability'
+     #Перевод нижней строчки: прочность
+     name: 'Durability'
+     #Перевод верхней строчки: прочность
+     #Твое решение (это 3 прочность)
+     cost: 1.0
+     #Твое решение (это 3 прочность)
+     description: 'Adds durability to your weapon or pickaxe or war-axe.'
+     enchant_id: 'DURABILITY'
+
+   - id: 'ench_fallprotection'
+     #Перевод нижней строчки: защита от падений
+     name: 'FallProtection'
+     #Перевод верхней строчки: защита от падений
+     #Твое решение (это 4 защита от падений)
+     cost: 1.0
+     #Твое решение (это 4 защита от падений)
+     description: 'Adds fall protection to your armor.'
+     enchant_id: 'PROTECTION_FALL'  
+ 
+   - id: 'ench_knockback'
+     #Перевод нижней строчки: отдача
+     name: 'Knockback'
+     #Перевод верхней строчки: отдача
+     #Твое решение (это 2 отдача)
+     cost: 1.0
+     #Твое решение (это 2 отдача)
+     description: 'Adds knockback enchantment to your sword or war-axe.'
+     enchant_id: 'KNOCKBACK'
+   
+   - id: 'ench_fortune'
+     #Перевод нижней строчки: удача
+     name: 'Fortune'
+     #Перевод верхней строчки: удача
+     #Твое решение (это 2 удача)
+     cost: 1.0
+     #Твое решение (это 2 удача)
+     description: 'Adds fortune enchantment to your pickaxe.'
+     enchant_id: 'LOOT_BONUS_BLOCKS' 
 

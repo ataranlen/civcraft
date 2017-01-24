@@ -108,9 +108,9 @@ public class Arena {
 				continue;
 			}
 			
-			if (!resident.isUsesAntiCheat()) {
-				throw new CivException(resident.getName()+" must be using anti-cheat in order to join the arena.");
-			}
+//			if (!resident.isUsesAntiCheat()) {
+//				throw new CivException(resident.getName()+" must be using anti-cheat in order to join the arena.");
+//			}
 			
 			try {
 				teleportToRandomRevivePoint(resident, teamCount);
@@ -128,14 +128,14 @@ public class Arena {
 	private void addCivCraftItemToInventory(String id, Inventory inv) {
 		LoreCraftableMaterial craftMat = LoreCraftableMaterial.getCraftMaterialFromId(id);
 		ItemStack stack = LoreCraftableMaterial.spawn(craftMat);
-		stack = LoreCraftableMaterial.addEnhancement(stack, LoreEnhancement.enhancements.get("LoreEnhancementSoulBound"));
+		//stack = LoreCraftableMaterial.addEnhancement(stack, LoreEnhancement.enhancements.get("LoreEnhancementSoulBound"));
 		stack = LoreCraftableMaterial.addEnhancement(stack, LoreEnhancement.enhancements.get("LoreEnhancementArenaItem"));
 		inv.addItem(stack);
 	}
 	
 	private void addItemToInventory(Material mat, Inventory inv, int amount) {
 		ItemStack stack = ItemManager.createItemStack(ItemManager.getId(mat), amount);
-		stack = LoreCraftableMaterial.addEnhancement(stack, LoreEnhancement.enhancements.get("LoreEnhancementSoulBound"));
+		//stack = LoreCraftableMaterial.addEnhancement(stack, LoreEnhancement.enhancements.get("LoreEnhancementSoulBound"));
 		stack = LoreCraftableMaterial.addEnhancement(stack, LoreEnhancement.enhancements.get("LoreEnhancementArenaItem"));
 		inv.addItem(stack);
 	}

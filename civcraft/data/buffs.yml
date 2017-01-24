@@ -1,14 +1,8 @@
-#
-# This files contains defines for buffs which can be applied to bonus goodies.
-# Eventually these buffs may also apply to governments and/or wonders
-#
-#
 
 buffs:
     - id: 'buff_construction'
       name: 'Construction'
       description: 'Increases hammer production by <lightgreen>100<r> hammers. <gold>Stackable<r>'
-#      value: '0.25'
       value: '100'
       stackable: true
       parent:
@@ -29,14 +23,14 @@ buffs:
 
     - id: 'buff_monopoly'
       name: 'Monopoly'
-      description: 'Increases coin output from all trade goods in use by <lightgreen>3%<r> <gold>Stackable<r>'
-      value: '0.3'
+      description: 'Increases coin output from all trade goods in use by <lightgreen>15%<r> <gold>Stackable<r>'
+      value: '0.15'
       stackable: true
       parent:
     
     - id: 'buff_preservative'
       name: 'Preservative'
-      description: 'Reduces consumption of cottages by <lightgreen>50%<r>'
+      description: 'Reduces consumption of cottages by <lightgreen>50%<r> <red>Not Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
@@ -50,7 +44,7 @@ buffs:
 
     - id: 'buff_barricade'
       name: 'Barricade'
-      description: 'Increases HP of defensive structures by <lightgreen>50%<r>'
+      description: 'Increases HP of defensive structures by <lightgreen>50%<r> <red>Not Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
@@ -64,85 +58,106 @@ buffs:
 
     - id: 'buff_fine_art'
       name: 'Fine Art'
-      description: 'Increases culture output of a town by <lightgreen>25%<r>'
+      description: 'Increases culture output of a town by <lightgreen>25%<r> <red>Not Stackable<r>'
       value: '0.25'
+      stackable: false
+      parent:
+
+    - id: 'buff_art_appreciation'
+      name: 'Art Appreciation'
+      description: 'Increases culture output of a town by <lightgreen>20%<r> <red>Not Stackable<r>'
+      value: '0.20'
       stackable: false
       parent:
 
     - id: 'buff_extraction'
       name: 'Extraction'
-      description: 'Increases the Trommel chance of producing precious minerals by <lightgreen>50%<r> <gold>Stackable<r>'
+      description: 'Increases the Trommel chance of producing precious minerals by <lightgreen>50%<r> <red>Not Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
 
     - id: 'buff_fire_bomb'
       name: 'Fire Bomb'
-      description: 'Increases damage of arrow/cannon towers by a <lightgreen>10%<r> Also makes arrow towers shoot flaming arrows <gold>Stackable<r>'
-      value: '1.0'
+      description: 'Increases damage of arrow/cannon towers by <lightgreen>50%<r> Also makes arrow towers shoot flaming arrows <red>Not Stackable<r>'
+      value: '0.5'
       stackable: false
       parent:
 
     - id: 'buff_fishing'
       name: 'Fishing'
-      description: 'Allows uncooked fish to replace the need for bread. <lightgreen>1 fish = 2 bread<r>'
+      description: 'Allows uncooked fish to replace the need for bread. <lightgreen>1 fish = 2 bread<r> <red>Not Stackable<r>'
       value: '2'
       stackable: false
       parent:
     
     - id: 'buff_greed'
       name: 'Greed'
-      description: 'Increases interest rates by <lightgreen>3%<r>'
+      description: 'Increases interest rates by <lightgreen>3%<r> <red>Not Stackable<r>'
       value: '0.03'
       stackable: false
       parent:
 
     - id: 'buff_medicine'
       name: 'Medicine'
-      description: 'Decreases friendly respawn time during war by <lightgreen>50<r> seconds.'
+      description: 'Decreases friendly respawn time during war by <lightgreen>50<r> seconds.<r> <red>Not Stackable<r>'
       value: '50'
       stackable: false
       parent:
     
     - id: 'buff_dirty_money'
       name: 'Dirty Money'
-      description: 'Increases the chances of Steal Treasury by <lightgreen>50%<r>'
+      description: 'Increases the chances of Steal Treasury by <lightgreen>50%<r> <red>Not Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
 
     - id: 'buff_espionage'
       name: 'Espionage'
-      description: 'Increases the chances of poison granary and incite revolt by <lightgreen>50%<r>'
+      description: 'Increases the chances of poison granary and incite revolt by <lightgreen>50%<r> <red>Not Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
     
     - id: 'buff_rush'
       name: 'Rush'
-      description: 'Reduces the hammer cost of all structures, wonders and improvements by <lightgreen>15%<r>'
+      description: 'Reduces the hammer cost of all structures, wonders and improvements by <lightgreen>15%<r> <red>Not Stackable<r>'
       value: '0.15'
       stackable: false
       parent:
-    
+
+    - id: 'buff_profit_sharing'
+      name: 'Profit Sharing'
+      description: 'Reduces the coin cost of all technology researches by <lightgreen>5%<r> <red>Not Stackable<r>'
+      value: '0.05'
+      stackable: false
+      parent:
+  
     - id: 'buff_sabotage'
       name: 'Sabotage'
-      description: 'Greatly increases the effectivenes of sabotage missions by <lightgreen>50%<r>'
+      description: 'Greatly increases the effectivenes of sabotage missions by <lightgreen>50%<r> <red>Not Stackable<r>'
       value: '0.5'
       stackable: false
       parent:
 
     - id: 'buff_hedonism'
       name: 'Hedonism'
-      description: 'Grants an extra <lightgreen>3<r> happiness'
+      description: 'Grants an extra <lightgreen>3<r> happiness<r> <gold>Stackable<r>'
       value: '3.0'
       stackable: true
       parent:
 
     - id: 'buff_noanarchy'
       name: 'No Anarchy'
-      description: 'Civilization does not experience anarchy when switching governments.'
+      description: 'Civilization spends 50% less time in anarchy, with a max of 2 hours.<r> <red>Not Stackable<r>'
       value: '0'
+      stackable: false
+      parent:
+
+    - id: 'buff_reduced_anarchy'
+      name: 'Reduced Anarchy'
+      description: 'Civilization spends 50% less time in anarchy per resident for this town.<r> <red>Not Stackable<r>'
+      value: '0.5'
       stackable: false
       parent:
 
@@ -163,8 +178,8 @@ buffs:
 
     - id: 'buff_pyramid_culture'
       name: 'Pyramid Culture Bonus' 
-      description: 'Increases culture output from civilization by 10%'
-      value: '1.1'
+      description: 'Increases culture output from civilization by 50%'
+      value: '0.5'
       stackable: false
       parent:
 
@@ -242,7 +257,7 @@ buffs:
 # Notre Dame buffs
     - id: 'buff_notre_dame_no_anarchy'
       name: 'Notre Dame Reduced Anarchy'
-      description: 'Civilization suffers 1/2 anarchy during government changes.'
+      description: 'Civilization suffers 1/2 anarchy time during government changes.'
       value: '0.5'
       stackable: false
       parent: 'buff_noanarchy'
@@ -294,8 +309,8 @@ buffs:
 #Globe Theatre Buffs
     - id: 'buff_globe_theatre_culture_from_towns'
       name: 'Globe Theatre Culture From Towns'
-      description: 'Increase culture by 1 for every town in the world.'
-      value: '1'
+      description: 'Increase culture by 10 for every town in the world.'
+      value: '10'
       stackable: false
       parent:
 
@@ -357,3 +372,62 @@ buffs:
       value: '1.5'
       stackable: false
       parent:
+      
+# Moscow State University Buffs
+    - id: 'buff_msu_beakers_rate'
+      name: 'MsuBeakerRate'
+      description: 'Moscow State University giving beakers.'
+      value: '0.2'
+      stackable: false
+      parent:
+
+    - id: 'buff_msu_profit_sharing'
+      name: 'MsuSharing'
+      description: 'Msu decreases price of techs.'
+      value: '0.2'
+      stackable: true
+      parent: 
+
+#Salling ship Buffs      
+    - id: 'buff_salingship_growth_rate'
+      name: 'GrowthRateShip'
+      description: 'Salling ship giving beakers.'
+      value: '1000.0'
+      stackable: false
+      parent:
+
+    - id: 'buff_msu_profit_sharing'
+      name: 'HappinessRateShip'
+      description: 'Salling ship giving happiness percent.'
+      value: '6.0'
+      stackable: true
+      parent:
+
+    - id: 'buff_msu_profit_sharing'
+      name: 'UnHappinessRateShip'
+      description: 'Salling ship giving happiness percent.'
+      value: '6.0'
+      stackable: true
+      parent:
+
+#Grand Canyon Buffs      
+    - id: 'buff_grand_canyon_construction'
+      name: 'ConstructionCanyon'
+      description: 'Grand Canyon giving hammers.'
+      value: '1000.0'
+      stackable: false
+      parent:
+
+    - id: 'buff_rush'
+      name: 'Rush'
+      description: 'Grand Canyon Reduces the hammer cost of all structures, wonders and improvements by 15%.'
+      value: '0.15'
+      stackable: false
+      parent:
+
+    - id: 'buff_grand_canyon_extraction'
+      name: 'ExtractionCanyon'
+      description: 'Grand CanyonIncreases the Trommel chance of producing precious minerals by 100%.'
+      value: '1.0'
+      stackable: true
+      parent:        
