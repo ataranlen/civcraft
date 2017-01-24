@@ -31,13 +31,10 @@ global:
    starting_coins: 250.0
 
    # Number of hours that must pass before a resident can join a different civ
-   join_civ_cooldown: 24
+   join_civ_cooldown: 12
 
    # Distance things must be built away from spawn.
    distance_from_spawn: 1000.0
-
-   # max distance players can be apart for trading
-   max_trade_distance: 10.0
 
    # catalyst free amount
    free_catalyst_amount: 3
@@ -52,7 +49,7 @@ global:
    attack_catalyst_multiplier: 1.0
 
    # Amount of extra armor each +1 gives to armor
-   defense_catalyst_multiplier: 1.0
+   defense_catalyst_multiplier: 0.5
 
    # Casual mode, war disabled. Wonders for all. No spies.
    casual_mode: 'false'
@@ -61,8 +58,6 @@ global:
    structure_validation: 'true'
 
 civ:
-    # Amount of coins required to start a civilization
-    cost: 100000.0
     
     # Amount of static upkeep civ's pay for each new town(minus the capitol)
     town_upkeep: 500.0
@@ -84,13 +79,13 @@ civ:
     town_distance_upkeep_max: 500000.0
 
     # Base beaker rate, usually set to 1, increase to make research faster.
-    base_beaker_rate: 1.0
+    base_beaker_rate: 0.1
     
     # Number of coins each beaker costs. Beakers can only be 'bought' off of taxed coins from towns.
     coins_per_beaker: 10
 
     # must be this many chunks away from the nearest culture block to start a new civilization.
-    min_distance: 15
+    min_distance: 30
 
     # Number of days after a civilization is conquered that it must wait before declaring revolution
     revolution_cooldown: 7
