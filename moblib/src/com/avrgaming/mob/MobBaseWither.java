@@ -1,16 +1,16 @@
 package com.avrgaming.mob;
 
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_7_R4.CraftWorld;
+import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
 import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 
 import com.avrgaming.nms.NMSUtil;
 
-import net.minecraft.server.v1_7_R4.Entity;
-import net.minecraft.server.v1_7_R4.EntityLiving;
-import net.minecraft.server.v1_7_R4.EntityWither;
-import net.minecraft.server.v1_7_R4.NBTTagCompound;
-import net.minecraft.server.v1_7_R4.World;
+import net.minecraft.server.v1_8_R3.Entity;
+import net.minecraft.server.v1_8_R3.EntityLiving;
+import net.minecraft.server.v1_8_R3.EntityWither;
+import net.minecraft.server.v1_8_R3.NBTTagCompound;
+import net.minecraft.server.v1_8_R3.World;
 
 public class MobBaseWither extends EntityWither implements ISpawnable {
 	public ICustomMob customMob = null;
@@ -26,7 +26,6 @@ public class MobBaseWither extends EntityWither implements ISpawnable {
 		NMSUtil.clearPathfinderGoals(this.targetSelector);
 	}
 	
-	/* Setting and loading custom NBT data. */
 	@Override
 	public void b(NBTTagCompound compound) {
 		super.b(compound);

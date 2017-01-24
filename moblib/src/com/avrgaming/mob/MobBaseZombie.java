@@ -3,17 +3,17 @@ package com.avrgaming.mob;
 import java.util.ArrayList;
 
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_7_R4.CraftWorld;
-import org.bukkit.craftbukkit.v1_7_R4.event.CraftEventFactory;
+import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
+import org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory;
 import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 import com.avrgaming.nms.NMSUtil;
-import net.minecraft.server.v1_7_R4.DamageSource;
-import net.minecraft.server.v1_7_R4.Entity;
-import net.minecraft.server.v1_7_R4.EntityZombie;
-import net.minecraft.server.v1_7_R4.Item;
-import net.minecraft.server.v1_7_R4.NBTTagCompound;
+import net.minecraft.server.v1_8_R3.DamageSource;
+import net.minecraft.server.v1_8_R3.Entity;
+import net.minecraft.server.v1_8_R3.EntityZombie;
+import net.minecraft.server.v1_8_R3.Item;
+import net.minecraft.server.v1_8_R3.NBTTagCompound;
 
-import net.minecraft.server.v1_7_R4.World;
+import net.minecraft.server.v1_8_R3.World;
 
 public class MobBaseZombie extends EntityZombie implements ISpawnable {
 	
@@ -30,7 +30,6 @@ public class MobBaseZombie extends EntityZombie implements ISpawnable {
 		customMob = custom;
 	}
 		
-	/* Setting and loading custom NBT data. */
 	@Override
 	public void b(NBTTagCompound compound) {
 		super.b(compound);
@@ -59,7 +58,6 @@ public class MobBaseZombie extends EntityZombie implements ISpawnable {
 		}
 	}
 	
-	/* Do not drop items. */
 	@Override
 	protected Item getLoot() {
 		return null;
@@ -102,7 +100,6 @@ public class MobBaseZombie extends EntityZombie implements ISpawnable {
 		
 	}
 	
-	/* Try to prevent fire ticks.. */
 	@Override
 	public void e() {
 		try {

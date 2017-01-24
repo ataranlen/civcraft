@@ -1,12 +1,12 @@
 package com.avrgaming.mob;
 
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_7_R4.CraftWorld;
+import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
 import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 
-import net.minecraft.server.v1_7_R4.Entity;
-import net.minecraft.server.v1_7_R4.EntityVillager;
-import net.minecraft.server.v1_7_R4.World;
+import net.minecraft.server.v1_8_R3.Entity;
+import net.minecraft.server.v1_8_R3.EntityVillager;
+import net.minecraft.server.v1_8_R3.World;
 
 public class MobBaseVillager extends EntityVillager {
 
@@ -19,11 +19,6 @@ public class MobBaseVillager extends EntityVillager {
 		CraftWorld world = (CraftWorld) loc.getWorld();
 		World mcWorld = world.getHandle();
 		MobBaseVillager zombie = new MobBaseVillager(mcWorld);
-		
-//		if (name != null) {
-//			zombie.setCustomName(name);
-//			zombie.setCustomNameVisible(true);
-//		}
 		
 		zombie.setPosition(loc.getX(), loc.getY(), loc.getZ());
 		mcWorld.addEntity(zombie, SpawnReason.CUSTOM);

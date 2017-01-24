@@ -7,19 +7,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import net.minecraft.server.v1_7_R4.Entity;
-import net.minecraft.server.v1_7_R4.EntityGiantZombie;
-import net.minecraft.server.v1_7_R4.EntityInsentient;
-import net.minecraft.server.v1_7_R4.EntityIronGolem;
-import net.minecraft.server.v1_7_R4.EntityLiving;
-import net.minecraft.server.v1_7_R4.EntityPigZombie;
-import net.minecraft.server.v1_7_R4.EntityTypes;
-import net.minecraft.server.v1_7_R4.EntityWitch;
-import net.minecraft.server.v1_7_R4.EntityWither;
-import net.minecraft.server.v1_7_R4.EntityZombie;
+import net.minecraft.server.v1_8_R3.Entity;
+import net.minecraft.server.v1_8_R3.EntityGiantZombie;
+import net.minecraft.server.v1_8_R3.EntityInsentient;
+import net.minecraft.server.v1_8_R3.EntityIronGolem;
+import net.minecraft.server.v1_8_R3.EntityLiving;
+import net.minecraft.server.v1_8_R3.EntityPigZombie;
+import net.minecraft.server.v1_8_R3.EntityTypes;
+import net.minecraft.server.v1_8_R3.EntityWitch;
+import net.minecraft.server.v1_8_R3.EntityWither;
+import net.minecraft.server.v1_8_R3.EntityZombie;
 
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_7_R4.entity.CraftLivingEntity;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftLivingEntity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.plugin.PluginManager;
@@ -40,7 +40,6 @@ public class MobLib extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
-		//CustomEntityType.registerEntities();
 		getCommand("moblib").setExecutor(new MobLibCommand());
 		final PluginManager pluginManager = getServer().getPluginManager();
 		pluginManager.registerEvents(new MobLibListener(), this);
@@ -134,8 +133,6 @@ public class MobLib extends JavaPlugin {
 	    WITCH("Witch", 66, EntityType.WITCH, EntityWitch.class, MobBaseWitch.class),
 	    IRON_GOLEM("VillagerGolem", 99, EntityType.IRON_GOLEM, EntityIronGolem.class, MobBaseIronGolem.class),
 		WITHER("WitherBoss", 64, EntityType.WITHER, EntityWither.class, MobBaseWither.class);
-		//WITHER_HEAD("WitherSkull", 19, EntityType.WITHER_SKULL, EntityWitherSkull.class, MobBaseWitherSkull.class);
-	    //BAT("Bat", 65, EntityType.BAT, EntityBat.class, MobBaseZombie.class);
 	    
 	    private String name;
 	    private int id;
@@ -155,21 +152,10 @@ public class MobLib extends JavaPlugin {
 	        return this.id;
 	    }
 	 
-	 //   public EntityType getEntityType() {
-	  //      return this.entityType;
-	  //  }
-	 
-	  //  public Class<? extends EntityInsentient> getNMSClass() {
-	   //     return this.nmsClass;
-	   // }
-	 
 	    public Class<? extends EntityInsentient> getCustomClass() {
 	        return this.customClass;
 	    }
 	 
-	    /**
-	    * Register our entities.
-	    */
 	    public static void registerEntities() {
 	        for (CustomEntityType entity : values())
 	            a(entity.getCustomClass(), entity.getName(), entity.getID());
@@ -179,13 +165,6 @@ public class MobLib extends JavaPlugin {
 	    	a(type.getCustomClass(), type.getName(), type.getID());
 	    }
 	    
-	    /**
-	    * A convenience method.
-	    * @param clazz The class.
-	    * @param f The string representation of the private static field.
-	    * @return The object found
-	    * @throws Exception if unable to get the object.
-	    */
 	    @SuppressWarnings("rawtypes")
 	    public static Object getPrivateStatic(Class clazz, String f) throws Exception {
 	        Field field = clazz.getDeclaredField(f);
@@ -198,15 +177,11 @@ public class MobLib extends JavaPlugin {
 	        try {
 	            ((Map) getPrivateStatic(EntityTypes.class, "c")).put(paramString, paramClass);
 	            ((Map) getPrivateStatic(EntityTypes.class, "d")).put(paramClass, paramString);
-	            //((Map) getPrivateStatic(EntityTypes.class, "e")).put(50, paramClass);
-	            //((Map) getPrivateStatic(EntityTypes.class, "f")).put(50, paramClass);
-	            //((Map) getPrivateStatic(EntityTypes.class, "g")).put(50, paramClass);
 	            
 	            ((Map) getPrivateStatic(EntityTypes.class, "e")).put(Integer.valueOf(paramInt), paramClass);
 	            ((Map) getPrivateStatic(EntityTypes.class, "f")).put(paramClass, Integer.valueOf(paramInt));
 	            ((Map) getPrivateStatic(EntityTypes.class, "g")).put(paramString, Integer.valueOf(paramInt));
 	        } catch (Exception exc) {
-	            // Unable to register the new class.
 	        }
 	    }
 	 
@@ -220,12 +195,4 @@ public class MobLib extends JavaPlugin {
 		}
 	}
 
-	
-	
-	
-	
-	
-	
-
-	
 }
