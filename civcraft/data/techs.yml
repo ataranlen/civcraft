@@ -518,13 +518,13 @@ techs:
       require_techs: 'tech_radio'
       era: 5
 
-    #- id: 'tech_military_science'
-     # name: 'Military Science'
-      #beaker_cost: 250000.0
-#      cost: 3000000.0
- #     points: 60000
-  #    require_techs: 'tech_laminates:tech_composites:tech_forging:tech_tempering:tech_radio'
-   #   era: 5
+    - id: 'tech_military_science'
+      name: 'Military Science'
+      beaker_cost: 250000.0
+      cost: 3000000.0
+      points: 60000
+      require_techs: 'tech_laminates:tech_composites:tech_forging:tech_tempering:tech_radio'
+      era: 5
 
 #Atomic era
 
@@ -644,7 +644,7 @@ techs:
       era: 0
       
     - id: 'tech_msu'
-      name: 'Московский Государственный Университет'
+      name: 'Moscow State University'
       beaker_cost: 150000.0
       cost: 150000.0
       points: 12500
@@ -652,7 +652,7 @@ techs:
       era: 0
 
     - id: 'tech_sallingship'
-      name: 'Бурдж Аль Араб'
+      name: 'Buldzh Al Arab'
       beaker_cost: 150000.0
       cost: 300000.0
       points: 12500
@@ -660,7 +660,7 @@ techs:
       era: 0
 
     - id: 'tech_grand_canyon'
-      name: 'Гранд Каньон'
+      name: 'Grand Canyon'
       beaker_cost: 150000.0
       cost: 300000.0
       points: 12500

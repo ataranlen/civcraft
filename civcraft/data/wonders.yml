@@ -248,13 +248,9 @@ wonders:
     regen_rate: 1
     
   - id: w_msu
-    #появится 
     template: the_great_library
-    #появится
     template_y_shift: 0
-    #Перевод нижней строчки: Московский Государственный Университет
     displayName: Moscow State University
-    #Перевод верхней строчки: Московский Государственный Университет
     require_tech: 'tech_msu'
     require_upgrade:
     check_event:
@@ -270,13 +266,9 @@ wonders:
     regen_rate: 6
 
   - id: w_sallingship
-    # SallingShip (появится)
-    template: mother_tree
-    # SallingShip (появится)
+    template: great_lighthouse
     template_y_shift: 0
-    #Перевод нижней строчки: Бурдж аль араб
     displayName: Salling Ship
-    #Перевод верхней строчки: Бурдж аль араб
     require_tech: 'tech_sallingship'
     require_upgrade:
     check_event:
@@ -292,13 +284,9 @@ wonders:
     regen_rate: 6
 
   - id: w_grandcanyon
-    # GrandCanyon (появится)
-    template: mother_tree
-    # GrandCanyon (появится)
+    template: unknow
     template_y_shift: 0
-    #Перевод нижней строчки: Гранд Каньон
     displayName: Grand Canyon
-    #Перевод верхней строчки: Гранд Каньон
     require_tech: 'tech_grand_canyon'
     require_upgrade:
     check_event:
