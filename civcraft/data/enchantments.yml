@@ -1,4 +1,4 @@
-# 
+l# 
 # This file contains any custom enchantments used on items
 #
 
@@ -27,43 +27,26 @@ enchants:
      description: '% chance to do extra damage to a structure.'
      enchant_id: 'LoreEnhancementPunchout'
      
-   - id: 'ench_durability'
-     #Перевод нижней строчки: прочность
+   - id: 'unbreaking'
      name: 'Durability'
-     #Перевод верхней строчки: прочность
-     #Твое решение (это 3 прочность)
-     cost: 1.0
-     #Твое решение (это 3 прочность)
+     cost: 200000.0
      description: 'Adds durability to your weapon or pickaxe or war-axe.'
      enchant_id: 'DURABILITY'
 
-   - id: 'ench_fallprotection'
-     #Перевод нижней строчки: защита от падений
+   - id: 'feather_falling'
      name: 'FallProtection'
-     #Перевод верхней строчки: защита от падений
-     #Твое решение (это 4 защита от падений)
-     cost: 1.0
-     #Твое решение (это 4 защита от падений)
+     cost: 40000.0
      description: 'Adds fall protection to your armor.'
      enchant_id: 'PROTECTION_FALL'  
  
-   - id: 'ench_knockback'
-     #Перевод нижней строчки: отдача
+   - id: 'knockback'
      name: 'Knockback'
-     #Перевод верхней строчки: отдача
-     #Твое решение (это 2 отдача)
-     cost: 1.0
-     #Твое решение (это 2 отдача)
+     cost: 500000.0
      description: 'Adds knockback enchantment to your sword or war-axe.'
      enchant_id: 'KNOCKBACK'
    
-   - id: 'ench_fortune'
-     #Перевод нижней строчки: удача
+   - id: 'fortune'
      name: 'Fortune'
-     #Перевод верхней строчки: удача
-     #Твое решение (это 2 удача)
-     cost: 1.0
-     #Твое решение (это 2 удача)
+     cost: 1000000.0
      description: 'Adds fortune enchantment to your pickaxe.'
-     enchant_id: 'LOOT_BONUS_BLOCKS' 
-
+     enchant_id: 'LOOT_BONUS_BLOCKS'

@@ -1,22 +1,25 @@
 package com.avrgaming.civcraft.structure.wonders;
 
-import org.bukkit.inventory.ItemStack;
-import com.avrgaming.civcraft.object.Resident;
+import java.util.Iterator;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+
 import org.bukkit.command.CommandSender;
-import org.bukkit.enchantments.Enchantment;
-import com.avrgaming.civcraft.main.CivMessage;
-import com.avrgaming.civcraft.main.CivGlobal;
+// import org.bukkit.enchantments.Enchantment;
+import org.bukkit.Location;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.entity.Player;
-import java.util.Iterator;
+import org.bukkit.inventory.ItemStack;
+
+import com.avrgaming.civcraft.object.Resident;
+import com.avrgaming.civcraft.main.CivMessage;
+import com.avrgaming.civcraft.main.CivGlobal;
 import com.avrgaming.civcraft.config.CivSettings;
 import com.avrgaming.civcraft.config.ConfigEnchant;
 import com.avrgaming.civcraft.object.StructureSign;
-import java.sql.SQLException;
-import java.sql.ResultSet;
 import com.avrgaming.civcraft.exception.CivException;
 import com.avrgaming.civcraft.object.Town;
-import org.bukkit.Location;
+import com.avrgaming.civcraft.structure.Library
 
 public class msu extends Wonder
 {
@@ -64,23 +67,23 @@ public class msu extends Wonder
             final String lowerCase;
             switch (lowerCase = sign.getAction().toLowerCase()) {
                 case "4": {
-                    final ConfigEnchant enchant = CivSettings.enchants.get("ench_durability");
-                    sign.setText(String.valueOf(enchant.name) + "\n\n" + "Â§a" + enchant.cost + " " + CivSettings.CURRENCY_NAME);
+                    final ConfigEnchant enchant = CivSettings.enchants.get("unbreaking");
+                    sign.setText(String.valueOf(enchant.name) + "\n\n" + "§a" + enchant.cost + " " + CivSettings.CURRENCY_NAME);
                     break;
                 }
                 case "5": {
-                    final ConfigEnchant enchant = CivSettings.enchants.get("ench_fallprotection");
-                    sign.setText(String.valueOf(enchant.name) + "\n\n" + "Â§a" + enchant.cost + " " + CivSettings.CURRENCY_NAME);
+                    final ConfigEnchant enchant = CivSettings.enchants.get("feather_falling");
+                    sign.setText(String.valueOf(enchant.name) + "\n\n" + "§a" + enchant.cost + " " + CivSettings.CURRENCY_NAME);
                     break;
                 }
                 case "6": {
-                    final ConfigEnchant enchant = CivSettings.enchants.get("ench_knockback");
-                    sign.setText(String.valueOf(enchant.name) + "\n\n" + "Â§a" + enchant.cost + " " + CivSettings.CURRENCY_NAME);
+                    final ConfigEnchant enchant = CivSettings.enchants.get("knockback");
+                    sign.setText(String.valueOf(enchant.name) + "\n\n" + "§a" + enchant.cost + " " + CivSettings.CURRENCY_NAME);
                     break;
                 }
                 case "7": {
-                    final ConfigEnchant enchant = CivSettings.enchants.get("ench_fortune");
-                    sign.setText(String.valueOf(enchant.name) + "\n\n" + "Â§a" + enchant.cost + " " + CivSettings.CURRENCY_NAME);
+                    final ConfigEnchant enchant = CivSettings.enchants.get("fortune");
+                    sign.setText(String.valueOf(enchant.name) + "\n\n" + "§a" + enchant.cost + " " + CivSettings.CURRENCY_NAME);
                     break;
                 }
                 default:
@@ -109,9 +112,9 @@ public class msu extends Wonder
                         CivMessage.sendError(player, CivSettings.localize.localizedString("msu_enchant_cannotEnchant"));
                         return;
                     }
-                    final ConfigEnchant configEnchant = CivSettings.enchants.get("ench_durability");
+                    final ConfigEnchant configEnchant = CivSettings.enchants.get("unbreaking");
                     if (!resident.getTreasury().hasEnough(configEnchant.cost)) {
-                        CivMessage.send(player, "Â§c" + CivSettings.localize.localizedString("var_msu_enchant_cannotAfford", configEnchant.cost, CivSettings.CURRENCY_NAME));
+                        CivMessage.send(player, "§c" + CivSettings.localize.localizedString("var_msu_enchant_cannotAfford", configEnchant.cost, CivSettings.CURRENCY_NAME));
                         return;
                     }
                     resident.getTreasury().withdraw(configEnchant.cost);
@@ -123,9 +126,9 @@ public class msu extends Wonder
                         CivMessage.sendError(player, CivSettings.localize.localizedString("msu_enchant_cannotEnchant"));
                         return;
                     }
-                    final ConfigEnchant configEnchant = CivSettings.enchants.get("ench_fallprotection");
+                    final ConfigEnchant configEnchant = CivSettings.enchants.get("feather_falling");
                     if (!resident.getTreasury().hasEnough(configEnchant.cost)) {
-                        CivMessage.send(player, "Â§c" + CivSettings.localize.localizedString("var_msu_enchant_cannotAfford", configEnchant.cost, CivSettings.CURRENCY_NAME));
+                        CivMessage.send(player, "§c" + CivSettings.localize.localizedString("var_msu_enchant_cannotAfford", configEnchant.cost, CivSettings.CURRENCY_NAME));
                         return;
                     }
                     resident.getTreasury().withdraw(configEnchant.cost);
@@ -137,9 +140,9 @@ public class msu extends Wonder
                         CivMessage.sendError(player, CivSettings.localize.localizedString("msu_enchant_cannotEnchant"));
                         return;
                     }
-                    final ConfigEnchant configEnchant = CivSettings.enchants.get("ench_knockback");
+                    final ConfigEnchant configEnchant = CivSettings.enchants.get("knockback");
                     if (!resident.getTreasury().hasEnough(configEnchant.cost)) {
-                        CivMessage.send(player, "Â§c" + CivSettings.localize.localizedString("var_msu_enchant_cannotAfford", configEnchant.cost, CivSettings.CURRENCY_NAME));
+                        CivMessage.send(player, "§c" + CivSettings.localize.localizedString("var_msu_enchant_cannotAfford", configEnchant.cost, CivSettings.CURRENCY_NAME));
                         return;
                     }
                     resident.getTreasury().withdraw(configEnchant.cost);
@@ -151,9 +154,9 @@ public class msu extends Wonder
                         CivMessage.sendError(player, CivSettings.localize.localizedString("msu_enchant_cannotEnchant"));
                         return;
                     }
-                    final ConfigEnchant configEnchant = CivSettings.enchants.get("ench_fortune");
+                    final ConfigEnchant configEnchant = CivSettings.enchants.get("fortune");
                     if (!resident.getTreasury().hasEnough(configEnchant.cost)) {
-                        CivMessage.send(player, "Â§c" + CivSettings.localize.localizedString("var_msu_enchant_cannotAfford", configEnchant.cost, CivSettings.CURRENCY_NAME));
+                        CivMessage.send(player, "§c" + CivSettings.localize.localizedString("var_msu_enchant_cannotAfford", configEnchant.cost, CivSettings.CURRENCY_NAME));
                         return;
                     }
                     resident.getTreasury().withdraw(configEnchant.cost);
