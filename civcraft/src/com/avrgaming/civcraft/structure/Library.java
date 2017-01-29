@@ -53,7 +53,6 @@ public class Library extends Structure {
 	
 	public static Enchantment getEnchantFromString(String name) {
 		
-		// Armor Enchantments
 		if (name.equalsIgnoreCase("protection")) {
 			return Enchantment.PROTECTION_ENVIRONMENTAL;
 		}
@@ -76,7 +75,6 @@ public class Library extends Structure {
 			return Enchantment.WATER_WORKER;
 		}
 		
-		// Sword Enchantments
 		if (name.equalsIgnoreCase("sharpness")) {
 			return Enchantment.DAMAGE_ALL;
 		}
@@ -96,7 +94,6 @@ public class Library extends Structure {
 			return Enchantment.LOOT_BONUS_MOBS;
 		}
 		
-		// Tool Enchantments
 		if (name.equalsIgnoreCase("efficiency")) {
 			return Enchantment.DIG_SPEED;
 		}
@@ -110,7 +107,6 @@ public class Library extends Structure {
 			return Enchantment.LOOT_BONUS_BLOCKS;
 		}
 		
-		// Bow Enchantments
 		if (name.equalsIgnoreCase("power")) {
 			return Enchantment.ARROW_DAMAGE;
 		}
@@ -210,7 +206,7 @@ public class Library extends Structure {
 				throw new CivException(CivSettings.localize.localizedString("library_enchant_cannotEnchant"));
 			}
 			
-			if (item.containsEnchantment(ench.enchant) && item.getEnchantmentLevel(ench.enchant) > ench.level) {
+			if (item.containsEnchantment(ench.enchant) && item.getEnchantmentLevel(ench.enchant) >= ench.level) {
 				throw new CivException(CivSettings.localize.localizedString("library_enchant_hasEnchant"));
 			}
 			
