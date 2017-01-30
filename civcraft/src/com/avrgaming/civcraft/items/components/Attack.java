@@ -46,6 +46,7 @@ public class Attack extends ItemComponent {
 				type(AttributeType.GENERIC_ATTACK_DAMAGE).
 				amount(0).
 				build());
+				attrs.setHideFlag(63);
 		attrs.addLore(CivColor.Rose+""+this.getDouble("value")+" "+CivSettings.localize.localizedString("itemLore_Attack"));
 		return;
 	}
