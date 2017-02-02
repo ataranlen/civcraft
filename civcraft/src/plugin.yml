@@ -1,6 +1,6 @@
 name: CivCraft
 main: com.avrgaming.civcraft.main.CivCraft
-version: 1.75
+version: 1.75.1beta
 
 commands:
     town:
@@ -16,7 +16,7 @@ commands:
     deny:
         aliases: [no]
     civ:
-        aliases:
+        aliases: [c]
     tc:
         aliases:
     cc:
