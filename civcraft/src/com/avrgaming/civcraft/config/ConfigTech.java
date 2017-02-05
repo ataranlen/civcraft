@@ -55,15 +55,20 @@ public class ConfigTech
     
     public double getAdjustedTechCost(final Civilization civ) {
         double rate = 1.0;
+        double rate2 = 1.0;
         for (final Town town : civ.getTowns()) {
             if (town.getBuffManager().hasBuff("buff_profit_sharing") || town.getBuffManager().hasBuff("buff_msu_profit_sharing")) {
                 rate -= town.getBuffManager().getEffectiveDouble("buff_profit_sharing");
-				rate -= town.getBuffManager().getEffectiveDouble(buff_msu_profit_sharing);
+                rate2 -= town.getBuffManager().getEffectiveDouble("buff_msu_profit_sharing");
             }
         }
         rate = Math.max(rate, 0.75);
         rate -= eraRate(civ);
         return Math.floor(this.cost * Math.max(rate, 0.01));
+
+        rate2 = Math.max(rate2, 0.75);
+        rate2 -= eraRate(civ);
+        return Math.floor(this.cost * Math.max(rate2, 0.01));
     }
     
     public static ArrayList<ConfigTech> getAvailableTechs(final Civilization civ) {
