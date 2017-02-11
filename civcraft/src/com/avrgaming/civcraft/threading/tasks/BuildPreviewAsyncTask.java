@@ -1,21 +1,3 @@
-/*************************************************************************
- * 
- * AVRGAMING LLC
- * __________________
- * 
- *  [2013] AVRGAMING LLC
- *  All Rights Reserved.
- * 
- * NOTICE:  All information contained herein is, and remains
- * the property of AVRGAMING LLC and its suppliers,
- * if any.  The intellectual and technical concepts contained
- * herein are proprietary to AVRGAMING LLC
- * and its suppliers and may be covered by U.S. and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from AVRGAMING LLC.
- */
 package com.avrgaming.civcraft.threading.tasks;
 
 
@@ -94,7 +76,10 @@ public class BuildPreviewAsyncTask extends CivAsyncTask {
 								return;
 							}
 							
-							ItemManager.sendBlockChange(getPlayer(), b.getLocation(), ItemManager.getId(Material.GLASS), 5);
+                                                        int preview;
+                                                        int preview = CivSettings.getInt(civConfig, "preview");
+
+							ItemManager.sendBlockChange(getPlayer(), b.getLocation(), ItemManager.getId(Material.(CivSettings.getInt(civConfig, "preview"))), 5);
 							resident.previewUndo.put(new BlockCoord(b.getLocation()),
 									new SimpleBlock(ItemManager.getId(b), ItemManager.getData(b)));
 							count++;			
