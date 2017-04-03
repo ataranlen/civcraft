@@ -391,7 +391,7 @@ public class BlockListener implements Listener {
 			}
 		}
 
-		class SyncTask implements Runnable {
+/*		class SyncTask implements Runnable {
 			LivingEntity entity;
 
 			public SyncTask(LivingEntity entity) {
@@ -417,7 +417,7 @@ public class BlockListener implements Listener {
 
 			CivLog.warning("Canceling horse spawn reason:"+event.getSpawnReason().name());
 			event.setCancelled(true);
-		}
+		}*/
 
 		coord.setFromLocation(event.getLocation());
 		TownChunk tc = CivGlobal.getTownChunk(coord);
