@@ -44,7 +44,7 @@ buffs:
     - id: 'buff_advanced_tooling'
       name: 'Advanced Tooling'
       description: 'Increases the mine improvement production by a <lightgreen>50%<r> <gold>Stackable<r>'
-      value: '0.5'
+      value: '1.5'
       stackable: true
       parent:
 
