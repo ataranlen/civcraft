@@ -542,6 +542,12 @@ public class CivSettings {
 		restrictedSpawns.put(EntityType.WITCH, 0);
 		restrictedSpawns.put(EntityType.WITHER, 0);
 		restrictedSpawns.put(EntityType.ZOMBIE, 0);
+		restrictedSpawns.put(EntityType.BAT, 0);
+		restrictedSpawns.put(EntityType.ENDERMITE, 0);
+		restrictedSpawns.put(EntityType.GUARDIAN, 0);
+		restrictedSpawns.put(EntityType.HUSK, 0);
+		restrictedSpawns.put(EntityType.STRAY, 0);
+		restrictedSpawns.put(EntityType.ZOMBIE_VILLAGER, 0);
 	}
 	
 	private static void initRestrictedItems() {
