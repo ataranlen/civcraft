@@ -35,15 +35,15 @@ public class ShowRecipe implements GuiAction {
 		} else {
 			LoreCraftableMaterial cmat = LoreCraftableMaterial.getCraftMaterialFromId(ingred.custom_id);
 			name = cmat.getName();
-			if (cmat.getConfigMaterial().ingredients == null) {
-				message = CivSettings.localize.localizedString("loreGui_recipes_notCraftable");	
-			} else {	
-				message = CivSettings.localize.localizedString("loreGui_recipes_clickForRecipe");
-			}
 			entryStack = LoreCraftableMaterial.spawn(cmat);
 			entryStack = LoreGuiItem.asGuiItem(entryStack);
-			entryStack = LoreGuiItem.setAction(entryStack, "ShowRecipe");
-			entryStack = LoreGuiItem.setActionData(entryStack, "backInventory", recInv.getName());
+			if (cmat.isCraftable()) {
+				message = CivSettings.localize.localizedString("loreGui_recipes_clickForRecipe");
+				entryStack = LoreGuiItem.setAction(entryStack, "ShowRecipe");
+				entryStack = LoreGuiItem.setActionData(entryStack, "backInventory", recInv.getName());
+			} else {
+				message = CivSettings.localize.localizedString("loreGui_recipes_notCraftable");	
+			}
 			AttributeUtil attrs = new AttributeUtil(entryStack);
 			attrs.addLore(message);
 			entryStack = attrs.getStack();
