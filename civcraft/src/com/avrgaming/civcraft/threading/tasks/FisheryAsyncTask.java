@@ -271,25 +271,25 @@ public class FisheryAsyncTask extends CivAsyncTask {
 		Biome biome = this.fishHatchery.getBiome();
 		
 		if (biome.equals(Biome.BIRCH_FOREST_HILLS) ||
-				biome.equals(Biome.BIRCH_FOREST_MOUNTAINS) ||
-				biome.equals(Biome.BIRCH_FOREST_HILLS_MOUNTAINS) ||
-				biome.equals(Biome.COLD_TAIGA_HILLS) ||
-				biome.equals(Biome.COLD_TAIGA_MOUNTAINS) ||
-				biome.equals(Biome.EXTREME_HILLS_MOUNTAINS) ||
-				biome.equals(Biome.EXTREME_HILLS_PLUS) ||
-				biome.equals(Biome.EXTREME_HILLS_PLUS_MOUNTAINS) ||
+				biome.equals(Biome.MUTATED_BIRCH_FOREST) ||
+				biome.equals(Biome.MUTATED_BIRCH_FOREST_HILLS) ||
+				biome.equals(Biome.TAIGA_COLD_HILLS) ||
+				biome.equals(Biome.MUTATED_TAIGA_COLD) ||
+				biome.equals(Biome.MUTATED_EXTREME_HILLS) ||
+				biome.equals(Biome.EXTREME_HILLS_WITH_TREES) ||
+				biome.equals(Biome.MUTATED_EXTREME_HILLS_WITH_TREES) ||
 				biome.equals(Biome.ICE_MOUNTAINS) ||
-				biome.equals(Biome.JUNGLE_EDGE_MOUNTAINS) ||
+				biome.equals(Biome.MUTATED_JUNGLE_EDGE) ||
 				biome.equals(Biome.JUNGLE_HILLS) ||
-				biome.equals(Biome.JUNGLE_MOUNTAINS) ||
-				biome.equals(Biome.MESA_PLATEAU_FOREST_MOUNTAINS) ||
-				biome.equals(Biome.MESA_PLATEAU_MOUNTAINS) ||
-				biome.equals(Biome.ROOFED_FOREST_MOUNTAINS) ||
-				biome.equals(Biome.SAVANNA_MOUNTAINS) ||
-				biome.equals(Biome.SAVANNA_PLATEAU_MOUNTAINS) ||
-				biome.equals(Biome.SMALL_MOUNTAINS) ||
-				biome.equals(Biome.SWAMPLAND_MOUNTAINS) ||
-				biome.equals(Biome.TAIGA_MOUNTAINS))
+				biome.equals(Biome.MUTATED_JUNGLE) ||
+				biome.equals(Biome.MUTATED_MESA_ROCK) ||
+				biome.equals(Biome.MUTATED_MESA_CLEAR_ROCK) ||
+				biome.equals(Biome.MUTATED_ROOFED_FOREST) ||
+				biome.equals(Biome.MUTATED_SAVANNA) ||
+				biome.equals(Biome.MUTATED_SAVANNA_ROCK) ||
+				biome.equals(Biome.SMALLER_EXTREME_HILLS) ||
+				biome.equals(Biome.MUTATED_SWAMPLAND) ||
+				biome.equals(Biome.MUTATED_TAIGA))
 		{
 			return 1;
 		}
@@ -297,39 +297,39 @@ public class FisheryAsyncTask extends CivAsyncTask {
 				biome.equals(Biome.EXTREME_HILLS) ||
 				biome.equals(Biome.FOREST) ||
 				biome.equals(Biome.FOREST_HILLS) ||
-				biome.equals(Biome.ICE_PLAINS) ||
-				biome.equals(Biome.ICE_PLAINS_SPIKES) ||
+				biome.equals(Biome.ICE_FLATS) ||
+				biome.equals(Biome.MUTATED_ICE_FLATS) ||
 				biome.equals(Biome.JUNGLE) ||
 				biome.equals(Biome.JUNGLE_EDGE) ||
-				biome.equals(Biome.MEGA_SPRUCE_TAIGA) ||
-				biome.equals(Biome.MEGA_SPRUCE_TAIGA_HILLS) ||
-				biome.equals(Biome.MEGA_TAIGA) ||
-				biome.equals(Biome.MEGA_TAIGA_HILLS) ||
-				biome.equals(Biome.FLOWER_FOREST) ||
+				biome.equals(Biome.MUTATED_REDWOOD_TAIGA) ||
+				biome.equals(Biome.MUTATED_REDWOOD_TAIGA_HILLS) ||
+				biome.equals(Biome.REDWOOD_TAIGA) ||
+				biome.equals(Biome.REDWOOD_TAIGA_HILLS) ||
+				biome.equals(Biome.MUTATED_FOREST) ||
 				biome.equals(Biome.MESA) ||
-				biome.equals(Biome.MESA_BRYCE) ||
-				biome.equals(Biome.MESA_PLATEAU) ||
-				biome.equals(Biome.MESA_PLATEAU_FOREST) ||
+				biome.equals(Biome.MUTATED_MESA) ||
+				biome.equals(Biome.MESA_CLEAR_ROCK) ||
+				biome.equals(Biome.MESA_ROCK) ||
 				biome.equals(Biome.ROOFED_FOREST) ||
 				biome.equals(Biome.SAVANNA) ||
-				biome.equals(Biome.SAVANNA_PLATEAU) ||
-				biome.equals(Biome.SUNFLOWER_PLAINS) ||
+				biome.equals(Biome.SAVANNA_ROCK) ||
+				biome.equals(Biome.MUTATED_PLAINS) ||
 				biome.equals(Biome.TAIGA) ||
 				biome.equals(Biome.TAIGA_HILLS))
 		{
 			return 2;
 		}
-		else if (biome.equals(Biome.BEACH) ||
+		else if (biome.equals(Biome.BEACHES) ||
 				biome.equals(Biome.COLD_BEACH) ||
-				biome.equals(Biome.COLD_TAIGA) ||
+				biome.equals(Biome.TAIGA_COLD) ||
 				biome.equals(Biome.DEEP_OCEAN) ||
 				biome.equals(Biome.DESERT) ||
 				biome.equals(Biome.DESERT_HILLS) ||
-				biome.equals(Biome.DESERT_MOUNTAINS) ||
+				biome.equals(Biome.MUTATED_DESERT) ||
 				biome.equals(Biome.FROZEN_OCEAN) ||
 				biome.equals(Biome.FROZEN_RIVER) ||
 				biome.equals(Biome.MUSHROOM_ISLAND) ||
-				biome.equals(Biome.MUSHROOM_SHORE) ||
+				biome.equals(Biome.MUSHROOM_ISLAND_SHORE) ||
 				biome.equals(Biome.OCEAN) ||
 				biome.equals(Biome.PLAINS) ||
 				biome.equals(Biome.RIVER) ||
