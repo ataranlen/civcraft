@@ -72,7 +72,7 @@ culture_biomes:
       happiness: 0.0
       beakers: 1.5
 
-    - name: SMALL_MOUNTAINS
+    - name: SMALLER_EXTREME_HILLS
       coins: 0.0
       hammers: 2.5
       growth: 0.5
@@ -86,7 +86,7 @@ culture_biomes:
       happiness: 0.025
       beakers: 0.5
 
-    - name: SUNFLOWER_PLAINS
+    - name: MUTATED_PLAINS
       coins: 0.0
       hammers: 1.0
       growth: 1.5
@@ -100,7 +100,7 @@ culture_biomes:
       happiness: 0.03
       beakers: 1.0
 
-    - name: SAVANNA_PLATEAU
+    - name: SAVANNA_ROCK
       coins: 0.0
       hammers: 1.25
       growth: 1.25
@@ -114,35 +114,35 @@ culture_biomes:
       happiness: 0.03
       beakers: 1.5
 
-    - name: MESA_BRYCE
+    - name: MUTATED_MESA
       coins: 0.0
       hammers: 2.0
       growth: 0.5
       happiness: 0.01
       beakers: 0.25
 
-    - name: MESA_PLATEAU
+    - name: MESA_CLEAR_ROCK
       coins: 0.0
       hammers: 2.5
       growth: 0.0
       happiness: 0.01
       beakers: 0.25
 
-    - name: MESA_PLATEAU_MOUNTAINS
+    - name: MUTATED_MESA_CLEAR_ROCK
       coins: 0.0
       hammers: 3.0
       growth: 0.0
       happiness: 0.0
       beakers: 0.25
 
-    - name: MESA_PLATEAU_FOREST_MOUNTAINS
+    - name: MUTATED_MESA_ROCK
       coins: 0.0
       hammers: 3.0
       growth: 0.0
       happiness: 0.0
       beakers: 0.25
 
-    - name: MESA_PLATEAU_FOREST
+    - name: MESA_ROCK
       coins: 0.0
       hammers: 1.5
       growth: 1.0
@@ -163,7 +163,7 @@ culture_biomes:
       happiness: 0.025
       beakers: 0.5
 
-    - name: FLOWER_FOREST
+    - name: MUTATED_FOREST
       coins: 0.0
       hammers: 1.0
       growth: 1.0
@@ -177,14 +177,14 @@ culture_biomes:
       happiness: 0.025
       beakers: 0.5
 
-    - name: BIRCH_FOREST_MOUNTAINS
+    - name: MUTATED_BIRCH_FOREST
       coins: 0.0
       hammers: 2.5
       growth: 0.5
       happiness: 0.01
       beakers: 1.0
 
-    - name: BIRCH_FOREST_HILLS_MOUNTAINS
+    - name: MUTATED_BIRCH_FOREST_HILLS
       coins: 0.0
       hammers: 1.5
       growth: 1.0
@@ -198,7 +198,7 @@ culture_biomes:
       happiness: 0.025
       beakers: 0.75
 
-    - name: ROOFED_FOREST_MOUNTAINS
+    - name: MUTATED_ROOFED_FOREST
       coins: 0.0
       hammers: 2.0
       growth: 2.0
@@ -212,28 +212,28 @@ culture_biomes:
       happiness: 0.02
       beakers: 0.5
 
-    - name: MEGA_TAIGA
+    - name: REDWOOD_TAIGA
       coins: 0.0
       hammers: 1.5
       growth: 0.25
       happiness: 0.02
       beakers: 1.5
 
-    - name: MEGA_SPRUCE_TAIGA
+    - name: MUTATED_REDWOOD_TAIGA
       coins: 0.0
       hammers: 2.5
       growth: 0.25
       happiness: 0.01
       beakers: 0.25
 
-    - name: MEGA_SPRUCE_TAIGA_HILLS
+    - name: MUTATED_REDWOOD_TAIGA_HILLS
       coins: 0.0
       hammers: 3.0
       growth: 0.0
       happiness: 0.03
       beakers: 0.5
 
-    - name: COLD_TAIGA
+    - name: TAIGA_COLD
       coins: 0.0
       hammers: 1.0
       growth: 0.25
@@ -268,28 +268,28 @@ culture_biomes:
       happiness: 0.015
       beakers: 1.0
 
-    - name: ICE_PLAINS
+    - name: ICE_FLATS
       coins: 0.0
       hammers: 1.0
       growth: 0.5
       happiness: 0.02
       beakers: 0.5
 
-    - name: ICE_PLAINS_SPIKES
+    - name: MUTADED_ICE_FLATS
       coins: 0.0
       hammers: 0.5
       growth: 0.0
       happiness: 0.03
       beakers: 3.0
 
-    - name: JUNGLE_MOUNTAINS
+    - name: MUTATED_JUNGLE
       coins: 0.0
       hammers: 3.0
       growth: 0.5
       happiness: 0.0
       beakers: 0.25
 
-    - name: JUNGLE_EDGE_MOUNTAINS
+    - name: MUTATED_JUNGLE_EDGE
       coins: 0.0
       hammers: 2.0
       growth: 0.25
@@ -303,54 +303,47 @@ culture_biomes:
       happiness: 0.02
       beakers: 1.0
 
-    - name: SAVANNA_MOUNTAINS
+    - name: MUTATED_SAVANNA
       coins: 0.0
       hammers: 4.0
       growth: 0.25
       happiness: 0.0
       beakers: 0.25
 
-    - name: SAVANNA_PLATEAU_MOUNTAINS
+    - name: MUTATED_SAVANNA_ROCK
       coins: 0.0
       hammers: 3.25
       growth: 0.5
       happiness: 0.0
       beakers: 0.0
 
-    - name: TAIGA_MOUNTAINS
+    - name: MUTATED_TAIGA
       coins: 0.0
       hammers: 1.5
       growth: 0.5
       happiness: 0.03
       beakers: 1.0
 
-    - name: COLD_TAIGA_MOUNTAINS
+    - name: MUTATED_TAIGA_COLD
       coins: 0.0
       hammers: 3.0
       growth: 0.0
       happiness: 0.0
       beakers: 1.0
 
-    - name: SWAMPLAND_MOUNTAINS
+    - name: MUTATED_SWAMPLAND
       coins: 0.0
       hammers: 2.5
       growth: 0.10
       happiness: 0.02
       beakers: 0.5
 
-    - name: DESERT_MOUNTAINS
+    - name: MUTATED_DESERT
       coins: 0.0
       hammers: 3.0
       growth: 0.0
       happiness: 0.01
       beakers: 1.0
-
-    - name: SMALL_MOUNTAINS
-      coins: 0.0
-      hammers: 2.5
-      growth: 0.5
-      happiness: 0.015
-      beakers: 0.5
 
     - name: MUSHROOM_ISLAND
       coins: 0.0
@@ -359,14 +352,14 @@ culture_biomes:
       happiness: 0.03
       beakers: 0.5
 
-    - name: MUSHROOM_SHORE
+    - name: MUSHROOM_ISLAND_SHORE
       coins: 0.0
       hammers: 0.5
       growth: 0.25
       happiness: 0.05
       beakers: 0.5
 
-    - name: BEACH
+    - name: BEACHES
       coins: 0.0
       hammers: 0.25
       growth: 0.5
@@ -415,14 +408,14 @@ culture_biomes:
       happiness: 0.02
       beakers: 0.15
 
-    - name: MEGA_TAIGA_HILLS
+    - name: REDWOOD_TAIGA_HILLS
       coins: 0.0
       hammers: 3.0
       growth: 0.1
       happiness: 0.0
       beakers: 0.1
 
-    - name: COLD_TAIGA_HILLS
+    - name: TAIGA_COLD_HILLS
       coins: 0.0
       hammers: 2.5
       growth: 0.15
@@ -436,21 +429,21 @@ culture_biomes:
       happiness: 0.0
       beakers: 0.15
 
-    - name: EXTREME_HILLS_MOUNTAINS
+    - name: MUTATED_EXTREME_HILLS
       coins: 0.0
       hammers: 4.0
       growth: 0.0
       happiness: 0.0
       beakers: 0.5
 
-    - name: EXTREME_HILLS_PLUS
+    - name: EXTREME_HILLS_WITH_TREES
       coins: 0.0
       hammers: 4.5
       growth: 0.0
       happiness: 0.0
       beakers: 0.0
 
-    - name: EXTREME_HILLS_PLUS_MOUNTAINS
+    - name: MUTATED_EXTREME_HILLS_WITH_TREES
       coins: 0.0
       hammers: 4.5
       growth: 0.0

@@ -994,7 +994,7 @@ structures:
     components:
         # - name: 'AttributeBiomeRadiusPerLevel'
         #   attribute: 'COINS'
-        #   biomes: 'DESERT:5,BEACH:5,RIVER:5,JUNGLE:5'
+        #   biomes: 'DESERT:5,BEACHES:5,RIVER:5,JUNGLE:5'
         #   base_value: '15.0'
         - name: 'ConsumeLevelComponent'
 
@@ -1095,7 +1095,7 @@ structures:
     components:
         # - name: 'AttributeBiomeRadiusPerLevel'
         #   attribute: 'HAMMERS'
-        #   biomes: 'EXTREME_HILLS:3,SMALL_MOUNTAINS:3,ICE_MOUNTAINS:3,DESERT_HILLS:1,FOREST_HILLS:1,TAGIA_HILLS:1,JUNGLE_HILLS:1'
+        #   biomes: 'EXTREME_HILLS:3,SMALLER_EXTREME_HILLS:3,ICE_MOUNTAINS:3,DESERT_HILLS:1,FOREST_HILLS:1,TAGIA_HILLS:1,JUNGLE_HILLS:1'
         #   base_value: '7.0'
         - name: 'ConsumeLevelComponent'
 
