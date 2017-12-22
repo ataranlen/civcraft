@@ -119,6 +119,8 @@ public class Civilization extends SQLObject {
 	
 	public String messageOfTheDay = "";
 	
+	public double settlerCost = 25000.0;
+	
 	private LinkedList<WarCamp> warCamps = new LinkedList<WarCamp>();
 	
 	public Civilization(String name, String capitolName, Resident leader) throws InvalidNameException {
@@ -186,6 +188,7 @@ public class Civilization extends SQLObject {
 			SQL.makeCol("conquered_date", "long", TABLE_NAME);
 			SQL.makeCol("created_date", "long", TABLE_NAME);
 			SQL.makeCol("motd", "mediumtext", TABLE_NAME);
+			SQL.makeCol("settlerCost", "double", TABLE_NAME);
 		}
 	}
 
@@ -243,6 +246,7 @@ public class Civilization extends SQLObject {
 		this.setTreasury(CivGlobal.createEconObject(this));
 		this.getTreasury().setBalance(rs.getDouble("coins"), false);
 		this.getTreasury().setDebt(rs.getDouble("debt"));
+		this.settlerCost = rs.getDouble("settlerCost");
 
 		for (ConfigTech tech : this.getTechs())
 		{
@@ -284,6 +288,8 @@ public class Civilization extends SQLObject {
 		hashmap.put("researched", this.saveResearchedTechs());
 		hashmap.put("adminCiv", this.adminCiv);
 		hashmap.put("conquered", this.conquered);
+		hashmap.put("settlerCost", this.settlerCost);
+		
 		if (this.conquer_date != null) {
 			hashmap.put("conquered_date", this.conquer_date.getTime());
 		} else {
@@ -1904,4 +1910,11 @@ public class Civilization extends SQLObject {
 		}
 	}
 	
+	public double getSettlerCost() {
+		return this.settlerCost;
+	}
+	
+	public void incrementSettlerCost(double incremention) {
+		this.settlerCost += incremention;
+	}
 }

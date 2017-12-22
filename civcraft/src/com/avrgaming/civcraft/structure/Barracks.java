@@ -81,30 +81,14 @@ public class Barracks extends Structure {
 
 	private String getUnitSignText(int index) throws IndexOutOfBoundsException {
 		ArrayList<ConfigUnit> unitList = getTown().getAvailableUnits();
-		
-		if (unitList.size() == 0) {
+		if (unitList.size() == 0)
 			return "\n"+CivColor.LightGray+CivSettings.localize.localizedString("Nothing")+"\n"+CivColor.LightGray+CivSettings.localize.localizedString("Available");			
-		}
-		
-		ConfigUnit unit = unitList.get(index);
-		String out = "\n";
-		int previousSettlers = 1;
-		double coinCost = unit.cost;
-		if (unit.id.equals("u_settler")) {
-			
-			ArrayList<SessionEntry> entries = CivGlobal.getSessionDB().lookup("settlers:"+this.getCiv().getName());
-			if (entries != null) {
-				for (SessionEntry entry : entries) {
-					previousSettlers += Integer.parseInt(entry.value);
-				}
-			}
 
-			coinCost *= previousSettlers;
-		}
-		
-		out += CivColor.LightPurple+unit.name+"\n";
-		out += CivColor.Yellow+coinCost+"\n";
-		out += CivColor.Yellow+CivSettings.CURRENCY_NAME;
+		ConfigUnit unit = unitList.get(index);
+		String out = "\n";	
+		out += CivColor.LightPurple + unit.name+"\n";
+		out += CivColor.Yellow + getTown().getCiv().getSettlerCost() + "\n";
+		out += CivColor.Yellow + CivSettings.CURRENCY_NAME;
 		
 		return out;
 	}
@@ -127,61 +111,35 @@ public class Barracks extends Structure {
 	
 	private void train(Resident whoClicked) throws CivException {
 		ArrayList<ConfigUnit> unitList = getTown().getAvailableUnits();
-
 		ConfigUnit unit = unitList.get(index);
-		if (unit == null) {
+		
+		if (unit == null)
 			throw new CivException(CivSettings.localize.localizedString("barracks_unknownUnit"));
-		}
-		
-		if (unit.limit != 0 && unit.limit < getTown().getUnitTypeCount(unit.id)) {
+		if (unit.limit != 0 && unit.limit < getTown().getUnitTypeCount(unit.id))
 			throw new CivException(CivSettings.localize.localizedString("var_barracks_atLimit",unit.name));
-		}
-		
-		if (!unit.isAvailable(getTown())) {
+		if (!unit.isAvailable(getTown()))
 			throw new CivException(CivSettings.localize.localizedString("barracks_unavailable"));
-		}
-		
-		if (this.trainingUnit != null) {
+		if (this.trainingUnit != null)
 			throw new CivException(CivSettings.localize.localizedString("var_barracks_inProgress",this.trainingUnit.name));
-		}
 
-		int previousSettlers = 1;
 		double coinCost = unit.cost;
-		if (unit.id.equals("u_settler")) {
-			if (!this.getCiv().getLeaderGroup().hasMember(whoClicked) && !this.getCiv().getAdviserGroup().hasMember(whoClicked)) {
-				throw new CivException(CivSettings.localize.localizedString("barracks_trainSettler_NoPerms"));
-			}
-			
-			ArrayList<SessionEntry> entries = CivGlobal.getSessionDB().lookup("settlers:"+this.getCiv().getName());
-			if (entries != null) {
-				CivLog.debug("entries: "+entries.size());
-				for (SessionEntry entry : entries) {
-					CivLog.debug("value: "+entry.value);
-					previousSettlers += Integer.parseInt(entry.value);
-				}
-			}
-
-			CivLog.debug("previousSettlers: "+previousSettlers);
-			coinCost *= previousSettlers;
-			CivLog.debug("unit.cost: "+coinCost);
-		}
+		if (unit.id.equals("u_settler"))
+			coinCost = getTown().getCiv().getSettlerCost();
 		
-		if (!getTown().getTreasury().hasEnough(coinCost)) {
+		if (!getTown().getTreasury().hasEnough(coinCost))
 			throw new CivException(CivSettings.localize.localizedString("var_barracks_tooPoor",unit.name,coinCost,CivSettings.CURRENCY_NAME));
-		}
-		
-		
 		getTown().getTreasury().withdraw(coinCost);
-		
 		
 		this.setCurrentHammers(0.0);
 		this.setTrainingUnit(unit);
 		CivMessage.sendTown(getTown(), CivSettings.localize.localizedString("var_barracks_begin",unit.name));
 		this.updateTraining();
-		if (unit.id.equals("u_settler")) {
-			CivGlobal.getSessionDB().add("settlers:"+this.getCiv().getName(), "1" , this.getCiv().getId(), this.getCiv().getId(), this.getId());
-		}
 		this.onTechUpdate();
+		
+		if (unit.id.equals("u_settler")) {
+			getTown().getCiv().incrementSettlerCost(25000.0);
+			getTown().getCiv().save();
+		}
 	}
 	
 	@Override
