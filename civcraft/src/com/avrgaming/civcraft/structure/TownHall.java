@@ -558,14 +558,14 @@ public class TownHall extends Structure implements RespawnLocationHolder {
 	
 	@Override
 	public void onPreBuild(Location loc) throws CivException {		
+		ChunkCoord coord = new ChunkCoord(loc);
+		TownChunk tc = CivGlobal.getTownChunk(coord);
+		if (tc == null || tc.getTown() != this.getTown()) {
+			throw new CivException(CivSettings.localize.localizedString("townHall_preBuild_outsideBorder"));
+		}		
+		
 		TownHall oldTownHall = this.getTown().getTownHall();
 		if (oldTownHall != null) {
-			ChunkCoord coord = new ChunkCoord(loc);
-			TownChunk tc = CivGlobal.getTownChunk(coord);
-			if (tc == null || tc.getTown() != this.getTown()) {
-				throw new CivException(CivSettings.localize.localizedString("townHall_preBuild_outsideBorder"));
-			}
-			
 			if (War.isWarTime()) {
 				throw new CivException(CivSettings.localize.localizedString("townHall_preBuild_duringWar"));
 			}
