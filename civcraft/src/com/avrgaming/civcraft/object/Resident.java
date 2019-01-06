@@ -1318,7 +1318,7 @@ public class Resident extends SQLObject {
 		ArrayList<Perk> unboundPerks = new ArrayList<Perk>();
 		for (Perk ourPerk : perks.values()) {
 
-			if (!ourPerk.getIdent().contains("template"))
+			if (!ourPerk.getIdent().contains("tpl_"))
 			{
 			CustomTemplate customTemplate = (CustomTemplate) ourPerk.getComponent("CustomTemplate");
 			if (customTemplate == null) {
@@ -1655,7 +1655,7 @@ public class Resident extends SQLObject {
         final Inventory inv = Bukkit.getServer().createInventory((InventoryHolder)player, 54, CivSettings.localize.localizedString("resident_techsGuiHeading"));
         for (final ConfigTech tech : techs) {
             final String techh = tech.name;
-            ItemStack itemStack = LoreGuiItem.build(tech.name, type, 0, "ง6" + CivSettings.localize.localizedString("clicktoresearch"), "งb" + CivSettings.localize.localizedString("money_req", tech.getAdjustedTechCost(civ)), "งa" + CivSettings.localize.localizedString("bealers_req", tech.getAdjustedBeakerCost(civ)), "งd" + CivSettings.localize.localizedString("era_this", tech.era));
+            ItemStack itemStack = LoreGuiItem.build(tech.name, type, 0, "ยง6" + CivSettings.localize.localizedString("clicktoresearch"), "ยงb" + CivSettings.localize.localizedString("money_req", tech.getAdjustedTechCost(civ)), "ยงa" + CivSettings.localize.localizedString("bealers_req", tech.getAdjustedBeakerCost(civ)), "ยงd" + CivSettings.localize.localizedString("era_this", tech.era));
             itemStack = LoreGuiItem.setAction(itemStack, "ResearchGui");
             itemStack = LoreGuiItem.setActionData(itemStack, "info", techh);
             inv.addItem(itemStack);
@@ -1675,19 +1675,19 @@ public class Resident extends SQLObject {
             return;
         }
         final Inventory inventory = Bukkit.getServer().createInventory((InventoryHolder)player, 9, CivSettings.localize.localizedString("resident_relationsGuiHeading"));
-        ItemStack relation = LoreGuiItem.build(CivColor.LightGreenBold + CivSettings.localize.localizedString("resident_relationsGui_ally"), ItemManager.getId(Material.EMERALD_BLOCK), 0, ChatColor.RESET + CivSettings.localize.localizedString("resident_relationsGui_allyInfo"), "ง6" + CivSettings.localize.localizedString("bookReborn_clickToView"));
+        ItemStack relation = LoreGuiItem.build(CivColor.LightGreenBold + CivSettings.localize.localizedString("resident_relationsGui_ally"), ItemManager.getId(Material.EMERALD_BLOCK), 0, ChatColor.RESET + CivSettings.localize.localizedString("resident_relationsGui_allyInfo"), "ยง6" + CivSettings.localize.localizedString("bookReborn_clickToView"));
         relation = LoreGuiItem.setAction(relation, "RelationAllies");
         relation = LoreGuiItem.setActionData(relation, "civilization", this.getCiv().getName());
         inventory.addItem(relation);
-        relation = LoreGuiItem.build(CivColor.LightGreenBold + CivSettings.localize.localizedString("resident_relationsGui_peace"), ItemManager.getId(Material.LAPIS_BLOCK), 0, ChatColor.RESET + CivSettings.localize.localizedString("resident_relationsGui_peaceInfo"), "ง6" + CivSettings.localize.localizedString("bookReborn_clickToView"));
+        relation = LoreGuiItem.build(CivColor.LightGreenBold + CivSettings.localize.localizedString("resident_relationsGui_peace"), ItemManager.getId(Material.LAPIS_BLOCK), 0, ChatColor.RESET + CivSettings.localize.localizedString("resident_relationsGui_peaceInfo"), "ยง6" + CivSettings.localize.localizedString("bookReborn_clickToView"));
         relation = LoreGuiItem.setAction(relation, "RelationPeaces");
         relation = LoreGuiItem.setActionData(relation, "civilization", this.getCiv().getName());
         inventory.addItem(relation);
-        relation = LoreGuiItem.build(CivColor.LightGreenBold + CivSettings.localize.localizedString("resident_relationsGui_hostile"), ItemManager.getId(Material.GOLD_BLOCK), 0, ChatColor.RESET + CivSettings.localize.localizedString("resident_relationsGui_hostileInfo"), "ง6" + CivSettings.localize.localizedString("bookReborn_clickToView"));
+        relation = LoreGuiItem.build(CivColor.LightGreenBold + CivSettings.localize.localizedString("resident_relationsGui_hostile"), ItemManager.getId(Material.GOLD_BLOCK), 0, ChatColor.RESET + CivSettings.localize.localizedString("resident_relationsGui_hostileInfo"), "ยง6" + CivSettings.localize.localizedString("bookReborn_clickToView"));
         relation = LoreGuiItem.setAction(relation, "RelationHostiles");
         relation = LoreGuiItem.setActionData(relation, "civilization", this.getCiv().getName());
         inventory.addItem(relation);
-        relation = LoreGuiItem.build(CivColor.LightGreenBold + CivSettings.localize.localizedString("resident_relationsGui_war"), ItemManager.getId(Material.REDSTONE_BLOCK), 0, ChatColor.RESET + CivSettings.localize.localizedString("resident_relationsGui_warInfo"), "ง6" + CivSettings.localize.localizedString("bookReborn_clickToView"));
+        relation = LoreGuiItem.build(CivColor.LightGreenBold + CivSettings.localize.localizedString("resident_relationsGui_war"), ItemManager.getId(Material.REDSTONE_BLOCK), 0, ChatColor.RESET + CivSettings.localize.localizedString("resident_relationsGui_warInfo"), "ยง6" + CivSettings.localize.localizedString("bookReborn_clickToView"));
         relation = LoreGuiItem.setAction(relation, "RelationWars");
         relation = LoreGuiItem.setActionData(relation, "civilization", this.getCiv().getName());
         inventory.addItem(relation);
@@ -1718,26 +1718,26 @@ public class Resident extends SQLObject {
             final double hammerCost = Math.round(info.hammer_cost * rate);
             ItemStack itemStack;
             if (town.getMayorGroup() == null || town.getAssistantGroup() == null || civ.getLeaderGroup() == null) {
-                itemStack = LoreGuiItem.build(info.displayName, ItemManager.getId(Material.REDSTONE_BLOCK), 0, "งb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "งa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "งd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "งc" + CivSettings.localize.localizedString("belongtown"));
+                itemStack = LoreGuiItem.build(info.displayName, ItemManager.getId(Material.REDSTONE_BLOCK), 0, "ยงb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "ยงa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "ยงd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "ยงc" + CivSettings.localize.localizedString("belongtown"));
             }
             else if (!this.getCiv().hasTechnology(info.require_tech)) {
                 final ConfigTech tech = CivSettings.techs.get(info.require_tech);
                 final String techh = tech.name;
-                itemStack = LoreGuiItem.build(info.displayName, ItemManager.getId(Material.REDSTONE), 0, "งb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "งa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "งd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "งc" + CivSettings.localize.localizedString("req") + tech.name, "ง3" + CivSettings.localize.localizedString("clicktoresearch"), "งd" + CivSettings.localize.localizedString("era_this", tech.era));
+                itemStack = LoreGuiItem.build(info.displayName, ItemManager.getId(Material.REDSTONE), 0, "ยงb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "ยงa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "ยงd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "ยงc" + CivSettings.localize.localizedString("req") + tech.name, "ยง3" + CivSettings.localize.localizedString("clicktoresearch"), "ยงd" + CivSettings.localize.localizedString("era_this", tech.era));
                 itemStack = LoreGuiItem.setAction(itemStack, "ResearchGui");
                 itemStack = LoreGuiItem.setActionData(itemStack, "info", techh);
             }
             else if (!town.getMayorGroup().hasMember(this) && !town.getAssistantGroup().hasMember(this) && !civ.getLeaderGroup().hasMember(this)) {
-                itemStack = LoreGuiItem.build(info.displayName, ItemManager.getId(Material.REDSTONE_BLOCK), 0, "งb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "งa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "งd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "งc" + CivSettings.localize.localizedString("belongtown"));
+                itemStack = LoreGuiItem.build(info.displayName, ItemManager.getId(Material.REDSTONE_BLOCK), 0, "ยงb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "ยงa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "ยงd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "ยงc" + CivSettings.localize.localizedString("belongtown"));
             }
             else if (info.isAvailable(town)) {
                 if (!info.id.contains("road") && !info.id.contains("wall")) {
-                    itemStack = LoreGuiItem.build(info.displayName, type, 0, "ง6" + CivSettings.localize.localizedString("clicktobuild"), "งb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "งa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "งd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep));
+                    itemStack = LoreGuiItem.build(info.displayName, type, 0, "ยง6" + CivSettings.localize.localizedString("clicktobuild"), "ยงb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "ยงa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "ยงd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep));
                     itemStack = LoreGuiItem.setAction(itemStack, "BuildChooseTemplate");
                     itemStack = LoreGuiItem.setActionData(itemStack, "info", info.id);
                 }
                 else {
-                    itemStack = LoreGuiItem.build(info.displayName, type, 0, "งb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "งa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "งd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "ง6" + CivSettings.localize.localizedString("clicktobuild"));
+                    itemStack = LoreGuiItem.build(info.displayName, type, 0, "ยงb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "ยงa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "ยงd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "ยง6" + CivSettings.localize.localizedString("clicktobuild"));
                     itemStack = LoreGuiItem.setAction(itemStack, "BuildFromIdCr");
                     itemStack = LoreGuiItem.setActionData(itemStack, "buildableName", info.displayName);
                 }
@@ -1746,7 +1746,7 @@ public class Resident extends SQLObject {
                 final ConfigBuildableInfo str = CivSettings.structures.get(info.require_structure);
                 if (str != null) {
                     final String req_build = str.displayName;
-                    itemStack = LoreGuiItem.build(info.displayName, ItemManager.getId(Material.BEDROCK), 0, "งc" + CivSettings.localize.localizedString("requ") + str.displayName, "งb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "งa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "งd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "ง3" + CivSettings.localize.localizedString("clicktobuild"));
+                    itemStack = LoreGuiItem.build(info.displayName, ItemManager.getId(Material.BEDROCK), 0, "ยงc" + CivSettings.localize.localizedString("requ") + str.displayName, "ยงb" + CivSettings.localize.localizedString("money_requ", Double.parseDouble(String.valueOf(info.cost))), "ยงa" + CivSettings.localize.localizedString("hammers_requ", hammerCost), "ยงd" + CivSettings.localize.localizedString("upkeep_day", info.upkeep), "ยง3" + CivSettings.localize.localizedString("clicktobuild"));
                     itemStack = LoreGuiItem.setAction(itemStack, "WonderGuiBuild");
                     itemStack = LoreGuiItem.setActionData(itemStack, "info", req_build);
                 }
@@ -1758,7 +1758,7 @@ public class Resident extends SQLObject {
                 inv.addItem(itemStack);
             }
         }
-        ItemStack is = LoreGuiItem.build("งe" + CivSettings.localize.localizedString("4udesa"), ItemManager.getId(Material.DIAMOND_BLOCK), 0, "ง6" + CivSettings.localize.localizedString("click_to_view"));
+        ItemStack is = LoreGuiItem.build("ยงe" + CivSettings.localize.localizedString("4udesa"), ItemManager.getId(Material.DIAMOND_BLOCK), 0, "ยง6" + CivSettings.localize.localizedString("click_to_view"));
         is = LoreGuiItem.setAction(is, "WondersGui");
         inv.setItem(53, is);
         LoreGuiItemListener.guiInventories.put(inv.getName(), inv);
@@ -1786,19 +1786,19 @@ public class Resident extends SQLObject {
             }
             ItemStack is = null;
             if (upgrade.isAvailable(town)) {
-                is = LoreGuiItem.build(upgrade.name, ItemManager.getId(Material.EMERALD_BLOCK), 0, "งb" + CivSettings.localize.localizedString("money_requ", Math.round(cost)), "ง6" + CivSettings.localize.localizedString("tutorial_lore_clicktoView"));
+                is = LoreGuiItem.build(upgrade.name, ItemManager.getId(Material.EMERALD_BLOCK), 0, "ยงb" + CivSettings.localize.localizedString("money_requ", Math.round(cost)), "ยง6" + CivSettings.localize.localizedString("tutorial_lore_clicktoView"));
                 is = LoreGuiItem.setAction(is, "UpgradeGuiBuy");
                 is = LoreGuiItem.setActionData(is, "info", upgrade.name);
             }
             else if (!town.hasStructure(upgrade.require_structure)) {
                 final ConfigBuildableInfo structure = CivSettings.structures.get(upgrade.require_structure);
-                is = LoreGuiItem.build(upgrade.name, ItemManager.getId(Material.EMERALD), 0, "งb" + CivSettings.localize.localizedString("money_requ", Math.round(cost)), "งc" + CivSettings.localize.localizedString("requ") + structure.displayName, "ง3" + CivSettings.localize.localizedString("clicktobuild"));
+                is = LoreGuiItem.build(upgrade.name, ItemManager.getId(Material.EMERALD), 0, "ยงb" + CivSettings.localize.localizedString("money_requ", Math.round(cost)), "ยงc" + CivSettings.localize.localizedString("requ") + structure.displayName, "ยง3" + CivSettings.localize.localizedString("clicktobuild"));
                 is = LoreGuiItem.setAction(is, "WonderGuiBuild");
                 is = LoreGuiItem.setActionData(is, "info", structure.displayName);
             }
             else if (!town.hasUpgrade(upgrade.require_upgrade)) {
                 final ConfigTownUpgrade upgrade2 = CivSettings.getUpgradeById(upgrade.require_upgrade);
-                is = LoreGuiItem.build(upgrade.name, ItemManager.getId(Material.GLOWSTONE_DUST), 0, "งb" + CivSettings.localize.localizedString("money_requ", Math.round(cost)), "งc" + CivSettings.localize.localizedString("requ") + upgrade2.name, "ง3" + CivSettings.localize.localizedString("clicktobuild"));
+                is = LoreGuiItem.build(upgrade.name, ItemManager.getId(Material.GLOWSTONE_DUST), 0, "ยงb" + CivSettings.localize.localizedString("money_requ", Math.round(cost)), "ยงc" + CivSettings.localize.localizedString("requ") + upgrade2.name, "ยง3" + CivSettings.localize.localizedString("clicktobuild"));
                 is = LoreGuiItem.setAction(is, "UpgradeGuiBuy");
                 is = LoreGuiItem.setActionData(is, "info", upgrade2.name);
             }
